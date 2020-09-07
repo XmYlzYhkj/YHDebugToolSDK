@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "summary": "This sdk can switch develop environment and detect network.",
   "description": "This sdk can switch develop environment and detect network.",
-  "homepage": "https://github.com/zhengxiaolang/YHDebugToolSDK",
+  "homepage": "https://github.com/XmYlzYhkj/YHDebugToolSDK.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"

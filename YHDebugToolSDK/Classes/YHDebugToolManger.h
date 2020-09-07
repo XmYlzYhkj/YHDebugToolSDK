@@ -29,6 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 显示网络调试界面
 +(void)showNetDebugView;
+
+
+/// 读取环境数据
+-(void)readEnvData;
+
+/// 保存环境数据
+-(void)saveEnvData;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
  This sdk can switch develop environment and detect network.
                        DESC
 
-  s.homepage         = 'https://github.com/zhengxiaolang/YHDebugToolSDK'
+  s.homepage         = 'https://github.com/XmYlzYhkj/YHDebugToolSDK.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhengxiaolang' => 'haifeng3099@126.com' }

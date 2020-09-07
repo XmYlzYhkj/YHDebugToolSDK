@@ -11,7 +11,9 @@
 #endif
 
 #import "UIWindow+YHDebugTool.h"
+#import "YHDebugToolDicToModel.h"
 #import "YHDebugToolEnvEditView.h"
+#import "YHDebugToolEnvListView.h"
 #import "YHDebugToolEnvModel.h"
 #import "YHDebugToolManger.h"
 #import "YHDebugToolView.h"

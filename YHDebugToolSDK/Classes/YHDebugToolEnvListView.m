@@ -1,16 +1,17 @@
 //
-//  YHDebugToolView.m
+//  YHDebugToolEnvListView.m
 //  FLEX
 //
-//  Created by zxl on 2020/9/3.
+//  Created by zxl on 2020/9/7.
 //
 
-#import "YHDebugToolView.h"
-#import <UIKit/UIKit.h>
-#import "YHDebugToolManger.h"
 #import "YHDebugToolEnvListView.h"
 
-@interface YHDebugToolView()<UITableViewDelegate,UITableViewDataSource>
+#import "YHDebugToolManger.h"
+#import "YHDebugToolEnvModel.h"
+#import "YHDebugToolEnvEditView.h"
+
+@interface YHDebugToolEnvListView()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *tableview;
 
@@ -18,7 +19,7 @@
 
 @end
 
-@implementation YHDebugToolView
+@implementation YHDebugToolEnvListView
 
 -(id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -51,22 +52,11 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return [YHDebugToolManger shareInstance].envModelForModules.allKeys.count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-        
-        if (indexPath.row == 0) {
-            cell.textLabel.text = @"网络抓包工具";
-        }else{
-            cell.textLabel.text = @"切换开发环境";
-        }
-        
-        return cell;
-    }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     cell.textLabel.text = [self getCellText:indexPath];
     
@@ -74,29 +64,35 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    
+    return 4;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    if (indexPath.row == 0) {
-        [YHDebugToolManger showNetDebugView];
-    }else{
-        
-        YHDebugToolEnvListView *listView = [[YHDebugToolEnvListView alloc] initWithFrame:self.bounds];
-        [self addSubview:listView];
-    }
+    YHDebugToolEnvModel *model = [self getEnvModelWithIndexPath:indexPath];
+    
+    model.currentUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
+    
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = model.currentUrl;
+    
+    [tableView reloadData];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[YHDebugToolManger shareInstance] saveEnvData];
+    });
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"UITableViewHeaderFooterView"];
     
-    if (section == 0) {
-        headerView.textLabel.text = @"菜单列表";
-    }
+    NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
+    
+    headerView.textLabel.text = [NSString stringWithFormat:@"模块：%@",array[section]];
     return headerView;
 }
 
@@ -119,13 +115,58 @@
     return 0.01;
 }
 
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return UITableViewCellEditingStyleInsert;
+//}
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //编辑
+    UITableViewRowAction *editRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+        YHDebugToolEnvModel *model = [self getEnvModelWithIndexPath:indexPath];
+        model.editUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
+        
+        YHDebugToolEnvEditView *editView = [[YHDebugToolEnvEditView alloc] initWithModel:model];
+        [editView setEditBlock:^{
+            [self.tableview reloadData];
+        }];
+        editView.frame = self.bounds;
+        
+        [self addSubview:editView];
+        
+        NSLog(@"点击了编辑");
+    }];
+    editRowAction.backgroundColor = [UIColor purpleColor];
+    
+    if(indexPath.section > 0)
+    {
+        return @[editRowAction];
+    }
+    
+    return @[];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        NSLog(@"styleNone");
+//    }
+//}
+
 #pragma mark - lazy loading
 
 -(UIButton *)closeBtn{
     if (!_closeBtn) {
         _closeBtn = [[UIButton alloc] init];
-        [_closeBtn setTitle:@"❌关闭调试界面❌" forState:UIControlStateNormal];
-        [_closeBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_closeBtn setTitle:@"⬅️返回功能界面⬅️" forState:UIControlStateNormal];
+        [_closeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [_closeBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
         _closeBtn.layer.borderColor = [UIColor redColor].CGColor;
         _closeBtn.layer.borderWidth = 1;
@@ -151,7 +192,7 @@
 -(NSString *)getCellText:(NSIndexPath *)indexPath{
     NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
     
-    NSString *moduleKey = array[indexPath.section - 1];
+    NSString *moduleKey = array[indexPath.section];
     
     YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
     
@@ -206,7 +247,7 @@
 
 -(YHDebugToolEnvModel *)getEnvModelWithIndexPath:(NSIndexPath *)indexPath{
     NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
-    NSString *moduleKey = array[indexPath.section - 1];
+    NSString *moduleKey = array[indexPath.section];
     YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
     
     return model;

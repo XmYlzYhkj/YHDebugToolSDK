@@ -23,21 +23,13 @@
         self.devUrl = @"";
         self.testUrl = @"";
         self.productUrl = @"";
+        self.editUrl = @"";
     }
     return self;
 }
+
 -(NSString *)getCurrentEnvName{
-    
-    if ([self.productUrl isEqualToString:self.currentUrl]) {
-        return @"正式环境";
-    }else if ([self.productUrl isEqualToString:self.pre_productUrl]) {
-        return @"预正式环境";
-    }else if ([self.productUrl isEqualToString:self.devUrl]) {
-        return @"开发环境";
-    }else if ([self.productUrl isEqualToString:self.testUrl]) {
-        return @"测试环境";
-    }
-    return @"未知";
+    return [self getEnvNameWithUrl:self.currentUrl];
 }
 
 /// 重写当前环境
@@ -51,4 +43,34 @@
         _currentUrl = productUrl;
     }
 }
+
+-(void)editWithNewUrl:(NSString *)url{
+    
+    if ([self.editUrl isEqualToString:self.productUrl]) {
+        self.productUrl = url;
+    }else if ([self.editUrl isEqualToString:self.pre_productUrl]) {
+        self.pre_productUrl = url;
+    }else if ([self.editUrl isEqualToString:self.devUrl]) {
+        self.devUrl = url;
+    }else if ([self.editUrl isEqualToString:self.testUrl]) {
+        self.testUrl = url;
+    }
+    self.editUrl = url;
+    
+}
+
+-(NSString *)getEnvNameWithUrl:(NSString *)url{
+    
+    if ([url isEqualToString:self.productUrl]) {
+        return @"正式环境";
+    }else if ([url isEqualToString:self.pre_productUrl]) {
+        return @"预正式环境";
+    }else if ([url isEqualToString:self.devUrl]) {
+        return @"开发环境";
+    }else if ([url isEqualToString:self.testUrl]) {
+        return @"测试环境";
+    }
+    return @"未知";
+}
+
 @end

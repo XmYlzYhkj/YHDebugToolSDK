@@ -26,8 +26,28 @@ NS_ASSUME_NONNULL_BEGIN
 /// 测试环境
 @property(nonatomic,copy)NSString *testUrl;
 
+///模块中文名称
+@property(nonatomic,copy)NSString *moduleName;
+
+///模块ID
+@property(nonatomic,copy)NSString *moduleId;
+
+///编辑的环境
+@property(nonatomic,copy)NSString *editUrl;
+
+
 /// 获取当前环境名称
 -(NSString *)getCurrentEnvName;
+
+
+/// 编辑设置新地址
+/// @param url 编辑的地址
+-(void)editWithNewUrl:(NSString *)url;
+
+
+/// 根据地址判断为何环境
+/// @param url 地址
+-(NSString *)getEnvNameWithUrl:(NSString *)url;
 
 @end
 
