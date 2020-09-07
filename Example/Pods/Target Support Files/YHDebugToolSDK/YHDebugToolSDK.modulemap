@@ -1,0 +1,6 @@
+framework module YHDebugToolSDK {
+  umbrella header "YHDebugToolSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

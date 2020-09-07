@@ -1,0 +1,6 @@
+framework module Pods_YHDebugToolSDK_Example {
+  umbrella header "Pods-YHDebugToolSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "YHDebugToolSDK",
+  "version": "1.0.0",
+  "summary": "This sdk can switch develop environment and detect network.",
+  "description": "This sdk can switch develop environment and detect network.",
+  "homepage": "https://github.com/zhengxiaolang/YHDebugToolSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhengxiaolang": "haifeng3099@126.com"
+  },
+  "source": {
+    "git": "https://github.com/zhengxiaolang/YHDebugToolSDK.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "YHDebugToolSDK/Classes/**/*",
+  "dependencies": {
+    "FLEX": [
+
+    ]
+  },
+  "configuration_pod_whitelist": {
+    "FLEX": [
+      "debug"
+    ]
+  }
+}

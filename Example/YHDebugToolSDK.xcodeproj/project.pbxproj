@@ -59,13 +59,13 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6E78FF3BFE675589E6F3656B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6E78FF3BFE675589E6F3656B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		727E4585D0D291C47A4C22CB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		727E4585D0D291C47A4C22CB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7A8EE5F20F0013911DCAB884 /* Pods-YHDebugToolSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDebugToolSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-YHDebugToolSDK_Example/Pods-YHDebugToolSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B81D72FDD254505583C4F17C /* Pods-YHDebugToolSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDebugToolSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-YHDebugToolSDK_Example/Pods-YHDebugToolSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C0DDC8BABCEABE65A87D2628 /* YHDebugToolSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YHDebugToolSDK.podspec; path = ../YHDebugToolSDK.podspec; sourceTree = "<group>"; };
+		C0DDC8BABCEABE65A87D2628 /* YHDebugToolSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YHDebugToolSDK.podspec; path = ../YHDebugToolSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C8D53E156FCF25DA1097B9CC /* Pods-YHDebugToolSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDebugToolSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-YHDebugToolSDK_Tests/Pods-YHDebugToolSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,6 @@
 				1903402EB4F1F48047171CAC /* Pods-YHDebugToolSDK_Tests.debug.xcconfig */,
 				C8D53E156FCF25DA1097B9CC /* Pods-YHDebugToolSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zhengxiaolang;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = HGF45DZ5N7;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -324,10 +327,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YHDebugToolSDK_Example/Pods-YHDebugToolSDK_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/YHDebugToolSDK/YHDebugToolSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YHDebugToolSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,11 +499,12 @@
 			baseConfigurationReference = B81D72FDD254505583C4F17C /* Pods-YHDebugToolSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HGF45DZ5N7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YHDebugToolSDK/YHDebugToolSDK-Prefix.pch";
 				INFOPLIST_FILE = "YHDebugToolSDK/YHDebugToolSDK-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hf.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -510,11 +516,12 @@
 			baseConfigurationReference = 7A8EE5F20F0013911DCAB884 /* Pods-YHDebugToolSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HGF45DZ5N7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YHDebugToolSDK/YHDebugToolSDK-Prefix.pch";
 				INFOPLIST_FILE = "YHDebugToolSDK/YHDebugToolSDK-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hf.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

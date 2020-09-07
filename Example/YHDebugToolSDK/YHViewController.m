@@ -8,6 +8,11 @@
 
 #import "YHViewController.h"
 
+#import "YHDebugToolView.h"
+
+#define VERTICAL_SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width    //竖屏宽度
+#define VERTICAL_SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)   //竖屏高度
+
 @interface YHViewController ()
 
 @end
@@ -18,6 +23,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    YHDebugToolView *toolView = [[YHDebugToolView alloc] initWithFrame:CGRectMake(0, 0, VERTICAL_SCREEN_WIDTH, VERTICAL_SCREEN_HEIGHT)];
+    
+//    [self.view addSubview:toolView];
 }
 
 - (void)didReceiveMemoryWarning
