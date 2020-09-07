@@ -32,6 +32,8 @@
 
 -(void)initData{
     self.backgroundColor = [UIColor whiteColor];
+    
+    [[YHDebugToolManger shareInstance] readEnvData];
 }
 
 -(void)createView{
@@ -84,7 +86,6 @@
     if (indexPath.row == 0) {
         [YHDebugToolManger showNetDebugView];
     }else{
-        
         YHDebugToolEnvListView *listView = [[YHDebugToolEnvListView alloc] initWithFrame:self.bounds];
         [self addSubview:listView];
     }
