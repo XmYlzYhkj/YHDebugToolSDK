@@ -11,12 +11,12 @@ typedef NS_ENUM(NSInteger,YHDebugToolEnvType){
     YHDebugToolEnvTypeProduct = 0,//生产地址
     YHDebugToolEnvTypeDev = 1,//开发
     YHDebugToolEnvTypeTest = 2,//测试
-    YHDebugToolEnvTypePreProduct = 3//预生产
+    YHDebugToolEnvTypePreProduct = 3,//预生产
+    YHDebugToolEnvTypeLocalCache = 4
+    //以上4种类型以进入app时候或者调用模块时候，新增模块数据时候的数据为主，此类型以保存过的本地数据为主
 };
  
 @protocol YHDebugToolDelegate <NSObject>
-
-//-(NSString *_Nullable)getDebugCurrentUrl;
 
 -(NSString *_Nullable)getDebugProductUrl;
 
@@ -25,6 +25,8 @@ typedef NS_ENUM(NSInteger,YHDebugToolEnvType){
 -(NSString *_Nullable)getDebugDevUrl;
 
 -(NSString *_Nullable)getDebugTestUrl;
+
+-(NSString *_Nullable)getDebugLocalCacheUrl;
 
 @end
 NS_ASSUME_NONNULL_BEGIN
@@ -42,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 测试环境
 @property(nonatomic,copy)NSString *testUrl;
+
+/// 本地缓存地址
+@property(nonatomic,copy)NSString *localCacheUrl;
 
 ///模块中文名称
 @property(nonatomic,copy)NSString *moduleName;

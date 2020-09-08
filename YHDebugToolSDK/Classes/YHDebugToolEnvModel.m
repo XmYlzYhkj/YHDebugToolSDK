@@ -18,10 +18,11 @@
     self = [super init];
     
     if (self) {
-        self.preProductUrl = @"进入编辑";
         self.devUrl = @"";
         self.testUrl = @"";
         self.productUrl = @"";
+        self.preProductUrl = @"左滑可进入编辑";
+        self.localCacheUrl = @"此环境类型app重启后只读取本地缓存";
     }
     return self;
 }
@@ -49,6 +50,9 @@
         case 3:
             return @"预正式环境";
             break;
+        case 4:
+            return @"自定义环境";
+            break;
         default:
             break;
     }
@@ -68,6 +72,9 @@
             break;
         case 3:
             return self.preProductUrl;
+            break;
+        case 4:
+            return self.localCacheUrl;
             break;
         default:
             break;
@@ -96,6 +103,9 @@
         case 3:
             self.preProductUrl = url;
             break;
+        case 4:
+            self.localCacheUrl = url;
+            break;
         default:
             break;
     }
@@ -116,6 +126,10 @@
 
 - (NSString * _Nullable)getDebugTestUrl {
     return self.testUrl;
+}
+
+- (NSString * _Nullable)getDebugLocalCacheUrl {
+    return self.localCacheUrl;
 }
 
 @end

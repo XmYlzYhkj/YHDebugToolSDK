@@ -21,6 +21,9 @@ static NSInteger YHDebugToolView_Tag = 123321;
 /// 模块配置环境
 @property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *envModelForModules;
 
+/// 上次保存的旧数据，为了在每次重新打开app后，先读旧数据，再跟新环境对比，将每个模块旧的环境类型设置到新的数据上
+@property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *oldEnvModelForModules;
+
 @property(nonatomic,strong)NSLock *lock;
 
 @end
@@ -124,11 +127,10 @@ static NSInteger YHDebugToolView_Tag = 123321;
         YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[key];
 
         NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] initWithDictionary:[YHDebugToolDicToModel dictionaryWithModel:model]];
-        
+
         //默认为保存以4个字段，手动移除 edit by zxl
         NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"];
         [mutableDic removeObjectsForKeys:filters];
-        
         [dic setValue:mutableDic forKey:key];
     }];
     
@@ -162,10 +164,9 @@ static NSInteger YHDebugToolView_Tag = 123321;
         }
         
         [self.lock lock];
-        [YHDebugToolManger shareInstance].envModelForModules = dic;
+        [YHDebugToolManger shareInstance].oldEnvModelForModules = dic;
         [self.lock unlock];
         
-//        NSLog(@"path = %@",[YHDebugToolManger shareInstance].envModelForModules);
     }else{
         NSLog(@"path = %@",@"文件不存在");
     }
@@ -237,7 +238,24 @@ static NSInteger YHDebugToolView_Tag = 123321;
         nil == model) {
         return;
     }
+    
+    if ([YHDebugToolManger shareInstance].oldEnvModelForModules.allKeys.count == 0) {
+        [[YHDebugToolManger shareInstance] readEnvData];
+    }
+    
     [[YHDebugToolManger shareInstance].lock lock];
+    
+    //start edit by zxl
+    //app重新打开后，每次进入，先读取旧数据的当前环境，将旧环境设置到新的model里，这样每次都可以读取到旧的数据
+    
+    YHDebugToolEnvModel *oldModel = [YHDebugToolManger shareInstance].oldEnvModelForModules[model.moduleId];
+    
+    if (oldModel != nil) {
+        model.currentEnvType = oldModel.currentEnvType;
+        model.localCacheUrl = oldModel.localCacheUrl;
+    }
+    // end
+    
     [[YHDebugToolManger shareInstance].envModelForModules setValue:model forKey:model.moduleId];
     [[YHDebugToolManger shareInstance].lock unlock];
 }

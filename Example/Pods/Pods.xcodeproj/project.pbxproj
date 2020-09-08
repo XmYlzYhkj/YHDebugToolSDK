@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014BD0E2709D3CC203CEB1A9A92FC91B /* YHDebugToolDicToModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEED8F2F47F05AEA151148D7936C2F6 /* YHDebugToolDicToModel.m */; };
+		0152EC2B6B4740F9E82CA92900C8793D /* YHDebugToolEnvModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B17E5C58FBEBCBC907BBFAD4533B3790 /* YHDebugToolEnvModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02A7DEAEBBF4C5499DDAFB020FA08E4E /* FLEXArgumentInputJSONObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557AC53DD045EA060A006FCE8F8DFC /* FLEXArgumentInputJSONObjectView.m */; };
-		02DD67A5FB7AD428D80960DE51B6DD88 /* YHDebugToolSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DF84CF21C031C408E8C1332C7F92F617 /* YHDebugToolSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02E1EB45157D82D32D000E7DB840DA20 /* YHDebugToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = F7230738CCF1757A98DE1EC59C7712C7 /* YHDebugToolView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F28965A3EEBEBC134DD86A60DBA286 /* FLEXMultilineTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0885139ED5A2957388371DD31DCD8999 /* FLEXMultilineTableViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		076CAFD8D9B28F2B2F3A755724631EF1 /* FLEXCookiesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA39EB6ADD76C143E2FC9C5E93713F1 /* FLEXCookiesTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		085FF59557DEF847B514C2DF1E787DE4 /* FLEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74837AEEDE0E2371204C977ACE747C44 /* FLEX.framework */; };
 		08649E5E6A77D23D5F276437A4C7541D /* FLEXNetworkSettingsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B316285395E77AED3CAA3311970AE4 /* FLEXNetworkSettingsTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0F5D579BBB29079EF2AB88DC0F871A37 /* YHDebugToolEnvEditView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9AEEA4CAECCC6A41422D818A0699AC0 /* YHDebugToolEnvEditView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F83B13A6B940A782EAA3478E303F190 /* UIWindow+YHDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9332E31BB186D5C227CD62EED962D404 /* UIWindow+YHDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FC7D0DC0FBDCC2BF907013BC64CC3CF /* YHDebugToolSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B6F098D1C63F0FF70ADE26B59FAB55 /* YHDebugToolSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10877FB8BCFBCB63E1E9584473AB28D7 /* FLEXNetworkTransactionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4960BDA2BB712AA11A3EA4DE312B21D1 /* FLEXNetworkTransactionDetailTableViewController.m */; };
 		167F177CC46D239092367111A4AE9558 /* FLEXViewControllerExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E21B32C925A4335227E0FC6756EA27 /* FLEXViewControllerExplorerViewController.m */; };
 		16E4E6E16F12461ECF3DB05FF5EE485D /* FLEXLayerExplorerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 33BB1431F1D45BA3B93EE4A1F6430192 /* FLEXLayerExplorerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1739BD65D683950D43D6ECE39C462A5A /* FLEXSystemLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCD057938F98D6728C4850AB0C3570A /* FLEXSystemLogTableViewController.m */; };
 		1805FDF7B43CBC9F2399C8BA1B18D262 /* FLEXKeyboardHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C981393B4F1D9A2C20B8DF9E36FFF059 /* FLEXKeyboardHelpViewController.m */; };
+		18D7DD7035EF1A251516FD87981EBEDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2217407DA6D303C4038AA6C1967 /* Foundation.framework */; };
 		19C5497281CF6DD447759F4AB7D113B8 /* FLEXDictionaryExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C515E019CF6B1E8CE251E710116880 /* FLEXDictionaryExplorerViewController.m */; };
 		1AEF746C65CB74E4D944705BBFFD28AB /* FLEXNetworkTransactionDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D693C31D31A63315DFC723FAB1B141E /* FLEXNetworkTransactionDetailTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1D5B4081AB539C6EA24C777920F8C9AC /* FLEXHierarchyTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AF844FA459A13E4FBF60F9F8D845BB /* FLEXHierarchyTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -31,23 +32,22 @@
 		21FB5A3A0C2EE8C7BB0B8731A21CF1E0 /* FLEXExplorerToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = FDD0FA9CCF7BEE9624C36C48FE51A431 /* FLEXExplorerToolbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2295054955CD2ED92A21E47E06941D29 /* FLEXNetworkRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 42FC5A5EE4B9DC8F5EB226F4C6858995 /* FLEXNetworkRecorder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		22EEAE346BE2747654C3E8BCE78EB0BC /* FLEXArgumentInputFontsPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB70A3EDABA55A351AE5A966E1642CCF /* FLEXArgumentInputFontsPickerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2500FA7DF2F6207190D45033BD6A192C /* YHDebugToolEnvListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325C7180BB3626A03BD4B3D5D2269C8 /* YHDebugToolEnvListView.m */; };
 		25AF21B1FE873B89ED25747126E118FF /* FLEXImagePreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 21DCED79A4892129AEB88EA20FB4991B /* FLEXImagePreviewViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		26E28D8474595F11596D2B0D048E1CF5 /* FLEXKeyboardShortcutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F065A63FC628005E5429E9254207D38 /* FLEXKeyboardShortcutManager.m */; };
 		274E00CC01603A5CA6AB66336862295B /* FLEXDefaultEditorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D87DB9B895CE6789F5222AF695BC5D6 /* FLEXDefaultEditorViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2A10135A92522831A912DECF59F1A4E3 /* FLEXDefaultEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BD315BEF7F899C8942A335EA8BCA1B /* FLEXDefaultEditorViewController.m */; };
 		2AF9794C132FBEB56BE1CE13408802B0 /* FLEXHierarchyTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 90021C70D0FB0F40E6654AEC37928E1E /* FLEXHierarchyTableViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B2F5E5DBC360000595EF1CCD33DD7EF /* YHDebugToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF29081AC15CE2F380BA7005D07B1A /* YHDebugToolView.m */; };
 		2CF9005733409FDFDD06E9D4FF0C2CE8 /* FLEXFileBrowserSearchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA58F8FD08D616D87AB88D35D850F4 /* FLEXFileBrowserSearchOperation.m */; };
-		2D1E4299BDA0009432D1BF7EEE15B533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2217407DA6D303C4038AA6C1967 /* Foundation.framework */; };
 		2D4A127AAFF2FAEC3DC5D52AA6CEA212 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CC3B07B4DC7E9F29BF98BBA1985F97 /* CoreGraphics.framework */; };
 		2F099562A4BBF951B011913D3E1DC695 /* FLEXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F468D55C54154D28FC12A5A18000F8B /* FLEXUtility.m */; };
 		31F607CC3E7A130A7635FA35550E8B57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2217407DA6D303C4038AA6C1967 /* Foundation.framework */; };
+		329195B0D41805BA6797B7CE11E8613A /* YHDebugToolEnvListView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD789FC33B189B904E8154F9889411A /* YHDebugToolEnvListView.m */; };
 		346BB01B59BE36BF09A358F0A97FDE2E /* FLEXLibrariesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF652E11C25D9AD4669BF286D9588 /* FLEXLibrariesTableViewController.m */; };
 		3613C0171B19C0D9941A7B7439ED9C15 /* FLEXArgumentInputFontView.h in Headers */ = {isa = PBXBuildFile; fileRef = C6483564D948CC2260C6F1A3B35BAC33 /* FLEXArgumentInputFontView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		371D182B4BA21835E6DE1935A35ADFF1 /* FLEXPropertyEditorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6E1C77AC0E6832A44D51B367D5EBF3 /* FLEXPropertyEditorViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		376F83DE0121B86F42EA5D7BE7F810DA /* FLEXDictionaryExplorerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F2535282B31AD6E811D22724F885866A /* FLEXDictionaryExplorerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38275C2EF19D46D7DB742F3A4CAB6B51 /* FLEXArgumentInputNotSupportedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8795182C43322384FD2704CF1384AB28 /* FLEXArgumentInputNotSupportedView.m */; };
-		3A71C806DFCF30C63DF28120ECCC21D7 /* YHDebugToolSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8767C55D33F0FC3134BEEFCA223F25A /* YHDebugToolSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AD115EBA959CFD65FF489DAF22008A2 /* FLEXTableColumnHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A7B4D5C510E8842225E7410F46B4BD /* FLEXTableColumnHeader.m */; };
 		3CBDFA7DAEA61DC1EBBD095E0EEF9C8C /* FLEXLiveObjectsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADFFA23CCC84123D1C456FF673275A9 /* FLEXLiveObjectsTableViewController.m */; };
 		3CBFE3C143190EEF17AE1218767686E7 /* FLEXArgumentInputSwitchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E73A7A43E67B07031A2331C3D02DC23 /* FLEXArgumentInputSwitchView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -57,7 +57,6 @@
 		3FFD353D7A7AA9DAC51EED576C403EE3 /* FLEXArgumentInputColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F94E9CEF164CE2F2B388653A745C2705 /* FLEXArgumentInputColorView.m */; };
 		40FE65FB038F747BE021C7FE42F82FED /* FLEX-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77024C5A8357C06A0086EEED09A0BAC8 /* FLEX-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41CE48B46E1F1AECAF0C943C66F69C0C /* FLEXNetworkTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEE74A14B6C8BD747AFA02968413C5F /* FLEXNetworkTransaction.m */; };
-		465C52D580E3E136DBF4091C491F30B9 /* YHDebugToolManger.h in Headers */ = {isa = PBXBuildFile; fileRef = 655CF55AC7B8C0BA8C39B9924EA36088 /* YHDebugToolManger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		478937EC9CB872C258E0C68F27FDFCD6 /* FLEXInstancesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EBC4098F0E200B6C92CC6488777A4 /* FLEXInstancesTableViewController.m */; };
 		4846008A8EF24AC3632868FA4656ECFE /* FLEXFileBrowserFileOperationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 613519A4571C959C7D19B2D145370E21 /* FLEXFileBrowserFileOperationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		48D10DA01E22967E61F3E6BEB9772C9E /* FLEXClassesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F30FD01482E40BA8F630D503C540FFA9 /* FLEXClassesTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -68,9 +67,8 @@
 		5037C26B7AC05EA770A96FA11E8EC542 /* FLEXNetworkRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 35682D50B603CD161E4ADD61EFA51328 /* FLEXNetworkRecorder.m */; };
 		512461594E9704DFAD274F76F1AB84FF /* FLEXUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = B07956F92DC0A7EA94D4AE430B7813BF /* FLEXUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		525E22DC47475E1906618A6FA7ECCA19 /* FLEXHeapEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC07E8AE291090F4322E4E5F29639 /* FLEXHeapEnumerator.m */; };
+		56026E17F0A4A3C375D01B1F1A585822 /* YHDebugToolManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E4960DB17ACD9F926C16DDB03A4053BB /* YHDebugToolManger.m */; };
 		57DD8CA02D8BC5B20C65E08FFF6C6F2C /* FLEXFileBrowserSearchOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1407DA3C1711043D55AD3A2117276779 /* FLEXFileBrowserSearchOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		588E087F797DA5FF76B9935D9386E855 /* YHDebugToolEnvEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786EBAB00BD09230ABF30AFDD4FF7609 /* YHDebugToolEnvEditView.m */; };
-		5942EE5620403814BFEEA36B51515407 /* YHDebugToolManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B92EBC605BF1832CC38CE5B962A4353D /* YHDebugToolManger.m */; };
 		5BA499C72C038E025FC899F02C3FBD04 /* FLEXSetExplorerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0618E6010D57BAEA40FDC09A74DE290A /* FLEXSetExplorerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5CF10354356EB5556C5805A8EA456FF9 /* FLEXArgumentInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B47FD268E36164F6975E310A900803 /* FLEXArgumentInputTextView.m */; };
 		5E99E78B4625BB3A12C0A1EE128F29AF /* FLEXTableLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4E5212439F7DF841CE6D6CF89828A /* FLEXTableLeftCell.m */; };
@@ -78,23 +76,22 @@
 		6229B9E8308F1DFBCC7480AD973AB590 /* Pods-YHDebugToolSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2688236F6A0089D8B0DABE6B08151F /* Pods-YHDebugToolSDK_Example-dummy.m */; };
 		62F8533F598299912ED6AEDEEC094844 /* FLEXMultilineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86886FFDFA32C98EC64F5FA2D0336EDB /* FLEXMultilineTableViewCell.m */; };
 		65BD3DE70C9571BDAA1F72D382976103 /* FLEXRealmDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA3EBFA6D1D1E92B95C803A6C9B6FB1 /* FLEXRealmDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		66554C24891CA44809F3387124EB1F9D /* YHDebugToolSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC255884A66728C049239252E6A43BF /* YHDebugToolSDK-dummy.m */; };
 		6979AFB5C99F1C2BFE82B5CC74A1E40F /* FLEXArgumentInputFontsPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFDCB846FED96AD807B4655027FEB9E /* FLEXArgumentInputFontsPickerView.m */; };
 		6A262B1FA6C95CD45D1E36F8D7A342DF /* FLEXResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 518F2EF48C317A0E50F2E7B3B454FE58 /* FLEXResources.m */; };
 		6CF50D117163F235D9EC161F8B5772F5 /* FLEXArgumentInputNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD6BA75D7501F63E13104C456AC4FCA /* FLEXArgumentInputNumberView.m */; };
 		6F347641545DE927E052E69CA8020DFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2217407DA6D303C4038AA6C1967 /* Foundation.framework */; };
-		70F66BB48F0A118026B7B474ADC13A8F /* YHDebugToolDicToModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D562548BCE9FBAE9B7A64D2E504CBF9 /* YHDebugToolDicToModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70FA194D49834C480E9E5AC46E8C5AFE /* FLEXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B727D7E9598819378DA1C6F058030BD2 /* FLEXWebViewController.m */; };
 		7219D22055C0D8B8273157BC8C75A09E /* FLEXArgumentInputTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1074ADF32061785C1421DA8047F28929 /* FLEXArgumentInputTextView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		72C013C100F18976BE675A19703F9E6C /* FLEXSQLiteDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A2BC81D3E0C6BDCC608680B652F411 /* FLEXSQLiteDatabaseManager.m */; };
 		74E87527EA1092F8C23D9DBA8607DCD6 /* FLEXArgumentInputFontView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26542728740BCF2F2830970B0C53382 /* FLEXArgumentInputFontView.m */; };
 		772CD6F80DA61604CFF0E5E758CA13C6 /* FLEXSystemLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F47F227476932212A7D3A818CABB6 /* FLEXSystemLogMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7746B54EE7D32555FA8F5F1C40878D26 /* FLEXTableLeftCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 054FC07DCBE5A6F85D28BE656B9ABEB8 /* FLEXTableLeftCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		78612D8F08F98F3B8B2E9A567541B58B /* YHDebugToolEnvModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE87A0853DCD16FD321E3F1C8AD3C5D3 /* YHDebugToolEnvModel.m */; };
 		79D7A81C05848CE3CCA3364F5136B5A8 /* FLEXViewControllerExplorerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FBEBA3140CC886BC3C4CB207E354FEFD /* FLEXViewControllerExplorerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7B88A9A7EAB0C16B92173C1FC6E2376B /* FLEXFileBrowserFileOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586ABFF6DD50FAA58CD3D583DA0ED15 /* FLEXFileBrowserFileOperationController.m */; };
-		7FBC55B625DC662848EDD82DD3F30786 /* YHDebugToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91B31F8919862F463C7118AFB58F7E /* YHDebugToolView.m */; };
+		7DF1BEEFA74BEACF51E4150C97BBB670 /* YHDebugToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E58A8A6EABBF92B3C920C34DC61CFBA /* YHDebugToolView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		801F01AAB64BB8FB2F94FE7F77CDE835 /* FLEXToolbarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1509B2D99A7537B600B95D827D2B25B4 /* FLEXToolbarItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		80D07ABAC3B673959B4B93A0E096A406 /* FLEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74837AEEDE0E2371204C977ACE747C44 /* FLEX.framework */; };
-		82D0283ECB088B617237DDC0BC7304CF /* YHDebugToolDicToModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F69D475B1B0BD5311A43A87DE32421 /* YHDebugToolDicToModel.m */; };
 		8310C3954DFE81C8B3079488B4B5FA0A /* Pods-YHDebugToolSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1232B5E6AB6E93215543B5D43683BAE3 /* Pods-YHDebugToolSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		832D7C79CE98DB914D292C5EBFACB06A /* FLEXNetworkTransactionTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 01EFDA5532D4FBECA1E7B62CCF9CFAB6 /* FLEXNetworkTransactionTableViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		848A914E46B74E3237FB6CCE0F954DA9 /* FLEXFieldEditorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B18BC4B6F142DCCBA00174F501E1C00D /* FLEXFieldEditorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -125,36 +122,39 @@
 		A27DA5C87FE062824DCC75DB42973A7D /* FLEX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 781E6827563BA4B1A2417D28619B0DC5 /* FLEX-dummy.m */; };
 		A2DF65928C3FFEAB9487631EC0A46E04 /* FLEXRealmDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C6A7627A0B05FDBB8C2B37399B48C /* FLEXRealmDatabaseManager.m */; };
 		A2DFBD05005EBCA0ABFF996D8EA5085C /* FLEXArgumentInputStringView.h in Headers */ = {isa = PBXBuildFile; fileRef = 973296FB1D03BF1DA7580A0581661941 /* FLEXArgumentInputStringView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A5475E9734B4D99AEA5AF7F27293EEDF /* UIWindow+YHDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D16E88BC258E748FBD92DEC16F4894DC /* UIWindow+YHDebugTool.m */; };
 		A5767740A3DB78CA5FA2C59AD8531967 /* FLEXFieldEditorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F4DCA8E969D49A7F7023B32EEA3D57 /* FLEXFieldEditorViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A6BC5F8100DB53CCFE987935F0060650 /* FLEXDatabaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA49E3F32A57F8A47B9F02CA09ADB36 /* FLEXDatabaseManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A7F06A0C43CFAB9C67980589A2567A8E /* FLEXMultiColumnTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4301B0DEA1256FB22871D54BF9563447 /* FLEXMultiColumnTableView.m */; };
 		AB931B3AD4261CDBB861A88E1796B61C /* FLEXRuntimeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C071C936E0EAE27AD35C40D612CC4258 /* FLEXRuntimeUtility.m */; };
 		AC0302F1F553A2E2433BA5D54C2163BB /* FLEXObjectExplorerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04073A530CBA9F411647A39F7A16B354 /* FLEXObjectExplorerFactory.m */; };
 		ACC72FDF63E427D5DF5EB46EBBF8A015 /* FLEX.h in Headers */ = {isa = PBXBuildFile; fileRef = 101A80333B5D0CD8A24A2C44B7212EE1 /* FLEX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACD41AF0DAD27D7867D4A40F11F5DAD5 /* YHDebugToolSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CB405EE039D62D875EFCB418F8D6CEB /* YHDebugToolSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B05963A1DEE2D89D8152299B1CAF9BAC /* FLEXKeyboardHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4513FCC752E626A0DBADF7D7F4AAAE /* FLEXKeyboardHelpViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B09471184913BE66A3770AA49E4F041D /* FLEXObjectExplorerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 27613C076EFB10FA24D47D5F1AC1FE6F /* FLEXObjectExplorerFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B0CF5BF21D7D26CFD5AAAFD02134166A /* FLEXResources.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B30ACC751360643A021A0B2C785016 /* FLEXResources.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B2847B323799BAD4430E4BD9F3E960A0 /* FLEXImageExplorerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5659C01E26508AF133219CE6CA0F1AEA /* FLEXImageExplorerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B45B958E4AC291FFF90C8661F3F5C7CD /* FLEXSetExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC80F85114ED8C08DF81F244EA3428 /* FLEXSetExplorerViewController.m */; };
+		B51277C5A10AC5418777BF54A1B742F9 /* YHDebugToolEnvEditView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2C3037C7FF6D620758DF2CCF3E0057 /* YHDebugToolEnvEditView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B55C5B6E88A38475748DE0950EC01267 /* FLEXNetworkHistoryTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E69F0A392C13B4B1EFFC1234CD1D9E /* FLEXNetworkHistoryTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B5A3C8D0C3988B5725CCEE703DEF519A /* FLEXCookiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F497B6052A0235354966BC9D39FB46C1 /* FLEXCookiesTableViewController.m */; };
 		B650DD60ECAFF7BD42C7A5032C63A096 /* FLEXTableColumnHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0441810BC3C132BC1B454FC4AC42487A /* FLEXTableColumnHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B6911B2ECAAD52169400AC2F9B0E6CB1 /* FLEXIvarEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39DDEDD87BF0897F2A8FE3B395E1557 /* FLEXIvarEditorViewController.m */; };
+		B6C252F097BF2521BD1410227816B6DC /* YHDebugToolDicToModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24546BDE9677D57AB221465B75A375A5 /* YHDebugToolDicToModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B83F50ED4E7AF64341E219CF3293F6F6 /* FLEXManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 97CDB465E8BF202D3A381B644B02698B /* FLEXManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B900A32A53BF8E2C531DDFDC7EC5BB86 /* FLEXMultiColumnTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 90D624678EAA251A6B5483D0330699D4 /* FLEXMultiColumnTableView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B9EC648EDCF86DD1424A7F905BE9A086 /* YHDebugToolEnvListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 85CD8599FE10831CF6CF5ECAB065B3DF /* YHDebugToolEnvListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA65A4572D38C8A1091EAFCBA9507C84 /* FLEXManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1CBC0830A71F79EFE1639756CDCC45 /* FLEXManager+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BB28990FBD06AA531EFEE22326860227 /* Pods-YHDebugToolSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6909CA707FBFC8FD1F46DD46E75A131 /* Pods-YHDebugToolSDK_Tests-dummy.m */; };
 		BE32465C2AC2AAFA797C638975E6E803 /* FLEXExplorerToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B74D5382CE70E6894B6099F70699BA2 /* FLEXExplorerToolbar.m */; };
 		BF5A4BE65C6F1FE9A4D2799DCF155703 /* FLEXImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F0CFE4A06B386A20C9ED2C0F1599A /* FLEXImagePreviewViewController.m */; };
+		C0413BC8324AEDCF29D1922DC8482BD7 /* UIWindow+YHDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 98791C601FFEEB1C88F851473E40C627 /* UIWindow+YHDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0D7B8B9792FEE244E29CA82E7512D4B /* FLEXObjectExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471095C72B137E560D2E5F0C372172B1 /* FLEXObjectExplorerViewController.m */; };
 		C30ABAEC9E0CF721D522AB09E34635BD /* FLEXLayerExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09400D6230460B7FFC029F04E266DC8 /* FLEXLayerExplorerViewController.m */; };
 		C392616F1B232D6694F17BC46B97FD51 /* FLEXToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C7989CAF5A88D9BF6775A86946360D /* FLEXToolbarItem.m */; };
+		C65F774C040AE36FCBA347CDE84903DA /* YHDebugToolEnvListView.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF53C355502B8956E73880471DED1CD /* YHDebugToolEnvListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8C1D4E9092FA4FB6146F8A0B3320B18 /* FLEXHierarchyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DEFDE515FE95AA11DFC97D5EF692E /* FLEXHierarchyTableViewController.m */; };
-		C8CBE2AD53C2AEB4F6A5C2C1468D05D8 /* YHDebugToolSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D80AD7FF70239BD2C73EF4D17E163B16 /* YHDebugToolSDK-dummy.m */; };
 		C8D3A06C6509E68E388206433560B977 /* FLEXArgumentInputStructView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965731333158AB655CBDAD7BF3A66F71 /* FLEXArgumentInputStructView.m */; };
 		CCD7A094A80963C5343A915E884724B0 /* FLEXInstancesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52CEB1EC4EBFD21702D23A5B9A998F /* FLEXInstancesTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CE3910A90BD65B0E581CBC64E6F9E840 /* YHDebugToolManger.h in Headers */ = {isa = PBXBuildFile; fileRef = C4AFBF7826CA61138DB02B119381C0E2 /* YHDebugToolManger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF73D649032B39AA8A9AE600B300A970 /* FLEXFieldEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E38A57EFA490AA56EE42A4DA0F6D5062 /* FLEXFieldEditorView.m */; };
 		D0B493DB0C60EFC7DD370ACD278A6BCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020068E0CAE3EA19D32ACBF79D50742A /* UIKit.framework */; };
 		D3748AB644FFAB6F48F07DD9A730DF7D /* FLEXNetworkObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = A34051C2EA4B8F1FD5068E9AAB8221ED /* FLEXNetworkObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -163,11 +163,11 @@
 		D654C6B3B176381535E270E5B8A31575 /* FLEXNetworkSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7BB2686FE5EA1731A94677E197F64 /* FLEXNetworkSettingsTableViewController.m */; };
 		DB842D52246EA9215FBC90C0B382B56D /* FLEXClassExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBA689F8C72BFD411BCAAB3BF62E93 /* FLEXClassExplorerViewController.m */; };
 		DE50D31C22FE7460CF9F487E4FAA7939 /* FLEXNetworkCurlLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B2017AA386FECE93E7026EA8E00602E /* FLEXNetworkCurlLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DEB360489CBEEDE12A3781F1F30038A5 /* YHDebugToolEnvModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1CD5746621BD2349F8CD083438990C /* YHDebugToolEnvModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0E5292F3BEB4EAAB7E6CCA8858DE5D6 /* FLEXTableContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7539C2C40F78A4C774D240AB1ADD2E88 /* FLEXTableContentViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E11F0EB4E8F9A19D7D568885606613F7 /* FLEXSQLiteDatabaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B3FA11BC2E63379E0AEB2E47D33BDFD /* FLEXSQLiteDatabaseManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E32B27EAD0CE6DFFA3EB6C3C64B1A84B /* FLEXTableContentCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 395F47E25253F71A99F4F3D9CE1F90E8 /* FLEXTableContentCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E4B7FD640E564B8B41A9A086FB182440 /* YHDebugToolEnvModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E313336D2BF3C9D18E8ECF52E8F72E /* YHDebugToolEnvModel.m */; };
+		E3D362E192CAAF1B9FC45BC0CCFC3528 /* UIWindow+YHDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0144CB8A43682C050F7336923129E4 /* UIWindow+YHDebugTool.m */; };
+		E3E568A0555249941DF3976B49ECD90F /* YHDebugToolEnvEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0AD1589E84401F48C99D7BA00EE2CB /* YHDebugToolEnvEditView.m */; };
 		E4C49996A892C3C3553D58D370CDCA8F /* FLEXViewExplorerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 26ACE75ED6C9D1289A4813AF54FE4546 /* FLEXViewExplorerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E85D325D44F0F3574970D04268E78A73 /* FLEXClassesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B217CA3D9CCBB7BCDB1E8757622CE8AA /* FLEXClassesTableViewController.m */; };
 		E8C27DFD85F46A741D8D4E5B41618BD4 /* FLEXSystemLogTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8209A81902E8BEDC9FC05FE65A36B1 /* FLEXSystemLogTableViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -194,19 +194,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1615DD2594A1A0CEC19B4F8BF69B0297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AEC09E383B46D12E00628362EB86D67;
+			remoteInfo = FLEX;
+		};
 		1E85E54FE36DC346C6DD5EBEC68D9F54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CEA88C4B3F80370BFDED2692D9185CC2;
 			remoteInfo = "Pods-YHDebugToolSDK_Example";
-		};
-		4AC16EAE096A969C4D70FADF3B584A41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3AEC09E383B46D12E00628362EB86D67;
-			remoteInfo = FLEX;
 		};
 		6FBD51E7758B3C095F36B23516218913 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -247,8 +247,11 @@
 		1509B2D99A7537B600B95D827D2B25B4 /* FLEXToolbarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXToolbarItem.h; path = Classes/Toolbar/FLEXToolbarItem.h; sourceTree = "<group>"; };
 		17F629BDFFC93D43E8562C5D697D215A /* FLEXTableListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXTableListViewController.m; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXTableListViewController.m; sourceTree = "<group>"; };
 		17FFC7ED4ADCC78304C31B6372987030 /* FLEXFileBrowserTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXFileBrowserTableViewController.h; path = Classes/GlobalStateExplorers/FLEXFileBrowserTableViewController.h; sourceTree = "<group>"; };
+		1B0144CB8A43682C050F7336923129E4 /* UIWindow+YHDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+YHDebugTool.m"; path = "YHDebugToolSDK/Classes/UIWindow+YHDebugTool.m"; sourceTree = "<group>"; };
+		1BFF29081AC15CE2F380BA7005D07B1A /* YHDebugToolView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolView.m; path = YHDebugToolSDK/Classes/YHDebugToolView.m; sourceTree = "<group>"; };
 		1C2EBBF8B659D657379F7CCC40871C0C /* FLEXArgumentInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputView.m; sourceTree = "<group>"; };
 		1CA49E3F32A57F8A47B9F02CA09ADB36 /* FLEXDatabaseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXDatabaseManager.h; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXDatabaseManager.h; sourceTree = "<group>"; };
+		1CB405EE039D62D875EFCB418F8D6CEB /* YHDebugToolSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHDebugToolSDK-umbrella.h"; sourceTree = "<group>"; };
 		1DDF49F88E780A2EA289B0142012AA00 /* FLEXFileBrowserTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXFileBrowserTableViewController.m; path = Classes/GlobalStateExplorers/FLEXFileBrowserTableViewController.m; sourceTree = "<group>"; };
 		1F065A63FC628005E5429E9254207D38 /* FLEXKeyboardShortcutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXKeyboardShortcutManager.m; path = Classes/Utility/FLEXKeyboardShortcutManager.m; sourceTree = "<group>"; };
 		1F1524F4ABD6E26AFD92B856F84D97FD /* FLEXGlobalsTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXGlobalsTableViewController.h; path = Classes/GlobalStateExplorers/FLEXGlobalsTableViewController.h; sourceTree = "<group>"; };
@@ -256,8 +259,8 @@
 		1F468D55C54154D28FC12A5A18000F8B /* FLEXUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXUtility.m; path = Classes/Utility/FLEXUtility.m; sourceTree = "<group>"; };
 		203E524F850054BFD0902E5137BFE08C /* Pods-YHDebugToolSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHDebugToolSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		21DCED79A4892129AEB88EA20FB4991B /* FLEXImagePreviewViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXImagePreviewViewController.h; path = Classes/ViewHierarchy/FLEXImagePreviewViewController.h; sourceTree = "<group>"; };
-		224ACEE512D0B4CC70FACAEA6F1A8CC5 /* YHDebugToolSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YHDebugToolSDK.release.xcconfig; sourceTree = "<group>"; };
-		23ABF1CCD11FDF01953B8D9C8019BF84 /* YHDebugToolSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHDebugToolSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23ABF1CCD11FDF01953B8D9C8019BF84 /* YHDebugToolSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YHDebugToolSDK.framework; path = YHDebugToolSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24546BDE9677D57AB221465B75A375A5 /* YHDebugToolDicToModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolDicToModel.h; path = YHDebugToolSDK/Classes/YHDebugToolDicToModel.h; sourceTree = "<group>"; };
 		24A37EF79B7D5FC9D06E81AFD8FD3EDD /* FLEXArgumentInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputView.h; sourceTree = "<group>"; };
 		2685C93D68CB69A1FBF483D0E7067C98 /* FLEXIvarEditorViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXIvarEditorViewController.h; path = Classes/Editing/FLEXIvarEditorViewController.h; sourceTree = "<group>"; };
 		26ACE75ED6C9D1289A4813AF54FE4546 /* FLEXViewExplorerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXViewExplorerViewController.h; path = Classes/ObjectExplorers/FLEXViewExplorerViewController.h; sourceTree = "<group>"; };
@@ -272,21 +275,21 @@
 		32773D90121FBC3AA65189B4B676FCE3 /* FLEXExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXExplorerViewController.m; path = Classes/ExplorerInterface/FLEXExplorerViewController.m; sourceTree = "<group>"; };
 		33BB1431F1D45BA3B93EE4A1F6430192 /* FLEXLayerExplorerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXLayerExplorerViewController.h; path = Classes/ObjectExplorers/FLEXLayerExplorerViewController.h; sourceTree = "<group>"; };
 		35682D50B603CD161E4ADD61EFA51328 /* FLEXNetworkRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXNetworkRecorder.m; path = Classes/Network/FLEXNetworkRecorder.m; sourceTree = "<group>"; };
-		35A9135E7BE45187225FC37AF6DB336A /* Pods_YHDebugToolSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDebugToolSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A9135E7BE45187225FC37AF6DB336A /* Pods_YHDebugToolSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHDebugToolSDK_Tests.framework; path = "Pods-YHDebugToolSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		368514828A83D52047B444025B8FB83B /* FLEXGlobalsTableViewControllerEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXGlobalsTableViewControllerEntry.h; path = Classes/ObjectExplorers/FLEXGlobalsTableViewControllerEntry.h; sourceTree = "<group>"; };
 		37110202E065F7A4080AC1EB986C9BD6 /* Pods-YHDebugToolSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YHDebugToolSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3792D11FE97F7F8546C86153D3CDD031 /* FLEXMethodCallingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXMethodCallingViewController.h; path = Classes/Editing/FLEXMethodCallingViewController.h; sourceTree = "<group>"; };
 		38C7989CAF5A88D9BF6775A86946360D /* FLEXToolbarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXToolbarItem.m; path = Classes/Toolbar/FLEXToolbarItem.m; sourceTree = "<group>"; };
 		395F47E25253F71A99F4F3D9CE1F90E8 /* FLEXTableContentCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXTableContentCell.h; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXTableContentCell.h; sourceTree = "<group>"; };
 		3A31DF4FDCC239CA68DE4330D123598C /* Pods-YHDebugToolSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YHDebugToolSDK_Tests.modulemap"; sourceTree = "<group>"; };
-		3BD3C689C9B97A7C6B4153AC7EEBEABD /* YHDebugToolSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YHDebugToolSDK.modulemap; sourceTree = "<group>"; };
+		3A5C9924852369E41AEE45EB7EB7032B /* YHDebugToolSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YHDebugToolSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3DD6BA75D7501F63E13104C456AC4FCA /* FLEXArgumentInputNumberView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputNumberView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputNumberView.m; sourceTree = "<group>"; };
 		3E4B31075F9E029AEE6484505CFF416C /* FLEX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLEX.debug.xcconfig; sourceTree = "<group>"; };
-		3F5B454F3258060E6C7A75EC6EE335F2 /* YHDebugToolSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YHDebugToolSDK-Info.plist"; sourceTree = "<group>"; };
 		3F6E1C77AC0E6832A44D51B367D5EBF3 /* FLEXPropertyEditorViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXPropertyEditorViewController.h; path = Classes/Editing/FLEXPropertyEditorViewController.h; sourceTree = "<group>"; };
 		4011D2217407DA6D303C4038AA6C1967 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		424404E25BACD56F2BDC71E96B603B43 /* FLEXSystemLogMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXSystemLogMessage.m; path = Classes/GlobalStateExplorers/SystemLog/FLEXSystemLogMessage.m; sourceTree = "<group>"; };
 		42ABC07E8AE291090F4322E4E5F29639 /* FLEXHeapEnumerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXHeapEnumerator.m; path = Classes/Utility/FLEXHeapEnumerator.m; sourceTree = "<group>"; };
+		42B6F098D1C63F0FF70ADE26B59FAB55 /* YHDebugToolSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolSDK.h; path = YHDebugToolSDK/Classes/YHDebugToolSDK.h; sourceTree = "<group>"; };
 		42FC5A5EE4B9DC8F5EB226F4C6858995 /* FLEXNetworkRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXNetworkRecorder.h; path = Classes/Network/FLEXNetworkRecorder.h; sourceTree = "<group>"; };
 		4301B0DEA1256FB22871D54BF9563447 /* FLEXMultiColumnTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXMultiColumnTableView.m; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXMultiColumnTableView.m; sourceTree = "<group>"; };
 		46136FA9746E9011B0DB414EE3A5CD63 /* FLEXDefaultsExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXDefaultsExplorerViewController.m; path = Classes/ObjectExplorers/FLEXDefaultsExplorerViewController.m; sourceTree = "<group>"; };
@@ -294,17 +297,17 @@
 		471095C72B137E560D2E5F0C372172B1 /* FLEXObjectExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXObjectExplorerViewController.m; path = Classes/ObjectExplorers/FLEXObjectExplorerViewController.m; sourceTree = "<group>"; };
 		4960BDA2BB712AA11A3EA4DE312B21D1 /* FLEXNetworkTransactionDetailTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXNetworkTransactionDetailTableViewController.m; path = Classes/Network/FLEXNetworkTransactionDetailTableViewController.m; sourceTree = "<group>"; };
 		49DBA689F8C72BFD411BCAAB3BF62E93 /* FLEXClassExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXClassExplorerViewController.m; path = Classes/ObjectExplorers/FLEXClassExplorerViewController.m; sourceTree = "<group>"; };
-		4AC7180564FE35A293CD0DD977EE56A8 /* FLEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4299C008C2798FE0FC37F8F8606F99 /* YHDebugToolSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YHDebugToolSDK.release.xcconfig; sourceTree = "<group>"; };
+		4AC7180564FE35A293CD0DD977EE56A8 /* FLEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FLEX.framework; path = FLEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D87DB9B895CE6789F5222AF695BC5D6 /* FLEXDefaultEditorViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXDefaultEditorViewController.h; path = Classes/Editing/FLEXDefaultEditorViewController.h; sourceTree = "<group>"; };
+		4E58A8A6EABBF92B3C920C34DC61CFBA /* YHDebugToolView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolView.h; path = YHDebugToolSDK/Classes/YHDebugToolView.h; sourceTree = "<group>"; };
 		4E73A7A43E67B07031A2331C3D02DC23 /* FLEXArgumentInputSwitchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputSwitchView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputSwitchView.h; sourceTree = "<group>"; };
 		518F2EF48C317A0E50F2E7B3B454FE58 /* FLEXResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXResources.m; path = Classes/Utility/FLEXResources.m; sourceTree = "<group>"; };
+		51CC72398A1F4AEEB44B3D22AFF21136 /* YHDebugToolSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YHDebugToolSDK.debug.xcconfig; sourceTree = "<group>"; };
 		53E5F1BC0D8F790F87C0EECF67BA9CE1 /* FLEXViewExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXViewExplorerViewController.m; path = Classes/ObjectExplorers/FLEXViewExplorerViewController.m; sourceTree = "<group>"; };
 		53F5882A2F3B5709B3B732636F5E0B65 /* FLEXObjectExplorerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXObjectExplorerViewController.h; path = Classes/ObjectExplorers/FLEXObjectExplorerViewController.h; sourceTree = "<group>"; };
-		544F796366F417DC855FB796DA3590A7 /* YHDebugToolSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YHDebugToolSDK.debug.xcconfig; sourceTree = "<group>"; };
-		5653FCD9371163C96BF0EEB32D0A276A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5659C01E26508AF133219CE6CA0F1AEA /* FLEXImageExplorerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXImageExplorerViewController.h; path = Classes/ObjectExplorers/FLEXImageExplorerViewController.h; sourceTree = "<group>"; };
 		57C515E019CF6B1E8CE251E710116880 /* FLEXDictionaryExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXDictionaryExplorerViewController.m; path = Classes/ObjectExplorers/FLEXDictionaryExplorerViewController.m; sourceTree = "<group>"; };
-		58E313336D2BF3C9D18E8ECF52E8F72E /* YHDebugToolEnvModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolEnvModel.m; path = YHDebugToolSDK/Classes/YHDebugToolEnvModel.m; sourceTree = "<group>"; };
 		5C6837362F217F258098FDE646FB04E7 /* Pods-YHDebugToolSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHDebugToolSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5C76B7F79F22D9FF0C44D7279B5EC6D9 /* FLEXSystemLogTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXSystemLogTableViewCell.m; path = Classes/GlobalStateExplorers/SystemLog/FLEXSystemLogTableViewCell.m; sourceTree = "<group>"; };
 		5CDA58F8FD08D616D87AB88D35D850F4 /* FLEXFileBrowserSearchOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXFileBrowserSearchOperation.m; path = Classes/GlobalStateExplorers/FLEXFileBrowserSearchOperation.m; sourceTree = "<group>"; };
@@ -312,10 +315,9 @@
 		5FEB0F40C20495BD3C739462EC92518B /* FLEXTableContentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXTableContentViewController.m; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXTableContentViewController.m; sourceTree = "<group>"; };
 		60A2BC81D3E0C6BDCC608680B652F411 /* FLEXSQLiteDatabaseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXSQLiteDatabaseManager.m; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXSQLiteDatabaseManager.m; sourceTree = "<group>"; };
 		613519A4571C959C7D19B2D145370E21 /* FLEXFileBrowserFileOperationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXFileBrowserFileOperationController.h; path = Classes/GlobalStateExplorers/FLEXFileBrowserFileOperationController.h; sourceTree = "<group>"; };
+		627D40C3754A182C4AB4D7B486A73EC8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		62E758F6E696F51836A97BD4C094EF20 /* FLEXArgumentInputNotSupportedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputNotSupportedView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputNotSupportedView.h; sourceTree = "<group>"; };
-		6325C7180BB3626A03BD4B3D5D2269C8 /* YHDebugToolEnvListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolEnvListView.m; path = YHDebugToolSDK/Classes/YHDebugToolEnvListView.m; sourceTree = "<group>"; };
 		64AE9643EDBB439E490A9260200FC3BA /* Pods-YHDebugToolSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YHDebugToolSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		655CF55AC7B8C0BA8C39B9924EA36088 /* YHDebugToolManger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolManger.h; path = YHDebugToolSDK/Classes/YHDebugToolManger.h; sourceTree = "<group>"; };
 		6586ABFF6DD50FAA58CD3D583DA0ED15 /* FLEXFileBrowserFileOperationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXFileBrowserFileOperationController.m; path = Classes/GlobalStateExplorers/FLEXFileBrowserFileOperationController.m; sourceTree = "<group>"; };
 		670DEFDE515FE95AA11DFC97D5EF692E /* FLEXHierarchyTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXHierarchyTableViewController.m; path = Classes/ViewHierarchy/FLEXHierarchyTableViewController.m; sourceTree = "<group>"; };
 		6B2017AA386FECE93E7026EA8E00602E /* FLEXNetworkCurlLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXNetworkCurlLogger.h; path = Classes/Network/FLEXNetworkCurlLogger.h; sourceTree = "<group>"; };
@@ -327,12 +329,10 @@
 		77024C5A8357C06A0086EEED09A0BAC8 /* FLEX-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLEX-umbrella.h"; sourceTree = "<group>"; };
 		781E6827563BA4B1A2417D28619B0DC5 /* FLEX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLEX-dummy.m"; sourceTree = "<group>"; };
 		784503C1A368D8959E86EBEADCC206DC /* Pods-YHDebugToolSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHDebugToolSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		786EBAB00BD09230ABF30AFDD4FF7609 /* YHDebugToolEnvEditView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolEnvEditView.m; path = YHDebugToolSDK/Classes/YHDebugToolEnvEditView.m; sourceTree = "<group>"; };
-		7D562548BCE9FBAE9B7A64D2E504CBF9 /* YHDebugToolDicToModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolDicToModel.h; path = YHDebugToolSDK/Classes/YHDebugToolDicToModel.h; sourceTree = "<group>"; };
+		7A0AD1589E84401F48C99D7BA00EE2CB /* YHDebugToolEnvEditView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolEnvEditView.m; path = YHDebugToolSDK/Classes/YHDebugToolEnvEditView.m; sourceTree = "<group>"; };
 		7DA3EBFA6D1D1E92B95C803A6C9B6FB1 /* FLEXRealmDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXRealmDefines.h; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXRealmDefines.h; sourceTree = "<group>"; };
 		7E1CBC0830A71F79EFE1639756CDCC45 /* FLEXManager+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FLEXManager+Private.h"; path = "Classes/Manager/FLEXManager+Private.h"; sourceTree = "<group>"; };
 		82396E3E54F07B969104BE5DE38BECBE /* FLEX.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FLEX.modulemap; sourceTree = "<group>"; };
-		85CD8599FE10831CF6CF5ECAB065B3DF /* YHDebugToolEnvListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolEnvListView.h; path = YHDebugToolSDK/Classes/YHDebugToolEnvListView.h; sourceTree = "<group>"; };
 		86886FFDFA32C98EC64F5FA2D0336EDB /* FLEXMultilineTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXMultilineTableViewCell.m; path = Classes/Utility/FLEXMultilineTableViewCell.m; sourceTree = "<group>"; };
 		86BD315BEF7F899C8942A335EA8BCA1B /* FLEXDefaultEditorViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXDefaultEditorViewController.m; path = Classes/Editing/FLEXDefaultEditorViewController.m; sourceTree = "<group>"; };
 		8795182C43322384FD2704CF1384AB28 /* FLEXArgumentInputNotSupportedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputNotSupportedView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputNotSupportedView.m; sourceTree = "<group>"; };
@@ -348,42 +348,45 @@
 		8E8209A81902E8BEDC9FC05FE65A36B1 /* FLEXSystemLogTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXSystemLogTableViewCell.h; path = Classes/GlobalStateExplorers/SystemLog/FLEXSystemLogTableViewCell.h; sourceTree = "<group>"; };
 		90021C70D0FB0F40E6654AEC37928E1E /* FLEXHierarchyTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXHierarchyTableViewCell.h; path = Classes/ViewHierarchy/FLEXHierarchyTableViewCell.h; sourceTree = "<group>"; };
 		90D624678EAA251A6B5483D0330699D4 /* FLEXMultiColumnTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXMultiColumnTableView.h; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXMultiColumnTableView.h; sourceTree = "<group>"; };
-		92965FA8F53DDFE30AC978D07FF24670 /* YHDebugToolSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHDebugToolSDK-prefix.pch"; sourceTree = "<group>"; };
-		9332E31BB186D5C227CD62EED962D404 /* UIWindow+YHDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+YHDebugTool.h"; path = "YHDebugToolSDK/Classes/UIWindow+YHDebugTool.h"; sourceTree = "<group>"; };
 		940893043E47AAD9AD4DF95F4DC26F3B /* FLEXRealmDatabaseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXRealmDatabaseManager.h; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXRealmDatabaseManager.h; sourceTree = "<group>"; };
 		965731333158AB655CBDAD7BF3A66F71 /* FLEXArgumentInputStructView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputStructView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputStructView.m; sourceTree = "<group>"; };
 		973296FB1D03BF1DA7580A0581661941 /* FLEXArgumentInputStringView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputStringView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputStringView.h; sourceTree = "<group>"; };
 		97CDB465E8BF202D3A381B644B02698B /* FLEXManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXManager.h; path = Classes/FLEXManager.h; sourceTree = "<group>"; };
+		98791C601FFEEB1C88F851473E40C627 /* UIWindow+YHDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+YHDebugTool.h"; path = "YHDebugToolSDK/Classes/UIWindow+YHDebugTool.h"; sourceTree = "<group>"; };
+		98951FC6064FD8ECFBD54AED4A0B1246 /* YHDebugToolSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YHDebugToolSDK-Info.plist"; sourceTree = "<group>"; };
 		9B177898A81D1C6156E5288B3499A047 /* FLEXArgumentInputColorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputColorView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputColorView.h; sourceTree = "<group>"; };
 		9B5B17498B8602BFC211CCF80A397A9C /* FLEXWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXWindow.h; path = Classes/ExplorerInterface/FLEXWindow.h; sourceTree = "<group>"; };
 		9B6D18B7D2A8463B77BF9684A9FEFBB6 /* Pods-YHDebugToolSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHDebugToolSDK_Example-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1701C350EE4E1817001D7412CBEC46 /* FLEXArgumentInputNumberView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputNumberView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputNumberView.h; sourceTree = "<group>"; };
 		9F6EF4692E276B911603CFF2C9D8A0D5 /* FLEXFieldEditorViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXFieldEditorViewController.m; path = Classes/Editing/FLEXFieldEditorViewController.m; sourceTree = "<group>"; };
 		A34051C2EA4B8F1FD5068E9AAB8221ED /* FLEXNetworkObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXNetworkObserver.h; path = Classes/Network/PonyDebugger/FLEXNetworkObserver.h; sourceTree = "<group>"; };
 		A7B89092CAB46241AC9BBDB0277C7FF8 /* FLEXWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXWindow.m; path = Classes/ExplorerInterface/FLEXWindow.m; sourceTree = "<group>"; };
 		A8794A872AD945BCCAE375AF8CF438A4 /* FLEX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLEX-prefix.pch"; sourceTree = "<group>"; };
 		A8B0A4FB68E5F807A436936CA64B0085 /* FLEXArgumentInputStructView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputStructView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputStructView.h; sourceTree = "<group>"; };
-		A9AEEA4CAECCC6A41422D818A0699AC0 /* YHDebugToolEnvEditView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolEnvEditView.h; path = YHDebugToolSDK/Classes/YHDebugToolEnvEditView.h; sourceTree = "<group>"; };
 		A9E321C6B4CA71783EAD237445104B7C /* Pods-YHDebugToolSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHDebugToolSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AB557AC53DD045EA060A006FCE8F8DFC /* FLEXArgumentInputJSONObjectView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputJSONObjectView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputJSONObjectView.m; sourceTree = "<group>"; };
+		ABEED8F2F47F05AEA151148D7936C2F6 /* YHDebugToolDicToModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolDicToModel.m; path = YHDebugToolSDK/Classes/YHDebugToolDicToModel.m; sourceTree = "<group>"; };
 		ACF85174958A7480F5AFA14C6142F08D /* FLEXArrayExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArrayExplorerViewController.m; path = Classes/ObjectExplorers/FLEXArrayExplorerViewController.m; sourceTree = "<group>"; };
+		ADC255884A66728C049239252E6A43BF /* YHDebugToolSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YHDebugToolSDK-dummy.m"; sourceTree = "<group>"; };
+		AE87A0853DCD16FD321E3F1C8AD3C5D3 /* YHDebugToolEnvModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolEnvModel.m; path = YHDebugToolSDK/Classes/YHDebugToolEnvModel.m; sourceTree = "<group>"; };
 		AF20CA45A91673E888946361FCB12F85 /* FLEXArgumentInputDateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputDateView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputDateView.m; sourceTree = "<group>"; };
 		B07956F92DC0A7EA94D4AE430B7813BF /* FLEXUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXUtility.h; path = Classes/Utility/FLEXUtility.h; sourceTree = "<group>"; };
 		B0BB543BA7ED8F3F311EE052A75467E3 /* FLEXClassExplorerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXClassExplorerViewController.h; path = Classes/ObjectExplorers/FLEXClassExplorerViewController.h; sourceTree = "<group>"; };
+		B17E5C58FBEBCBC907BBFAD4533B3790 /* YHDebugToolEnvModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolEnvModel.h; path = YHDebugToolSDK/Classes/YHDebugToolEnvModel.h; sourceTree = "<group>"; };
 		B18BC4B6F142DCCBA00174F501E1C00D /* FLEXFieldEditorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXFieldEditorView.h; path = Classes/Editing/FLEXFieldEditorView.h; sourceTree = "<group>"; };
 		B217CA3D9CCBB7BCDB1E8757622CE8AA /* FLEXClassesTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXClassesTableViewController.m; path = Classes/GlobalStateExplorers/FLEXClassesTableViewController.m; sourceTree = "<group>"; };
 		B727D7E9598819378DA1C6F058030BD2 /* FLEXWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXWebViewController.m; path = Classes/GlobalStateExplorers/FLEXWebViewController.m; sourceTree = "<group>"; };
-		B92EBC605BF1832CC38CE5B962A4353D /* YHDebugToolManger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolManger.m; path = YHDebugToolSDK/Classes/YHDebugToolManger.m; sourceTree = "<group>"; };
 		BB4C06408371C174AF45D3CFD4BCE45D /* Pods-YHDebugToolSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHDebugToolSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC9E7DB7E1F7D4DB0B48E1DBD7DDA9A0 /* FLEXWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXWebViewController.h; path = Classes/GlobalStateExplorers/FLEXWebViewController.h; sourceTree = "<group>"; };
 		BE495FA50F930F34890FD864E7FE5372 /* FLEXArgumentInputViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputViewFactory.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputViewFactory.m; sourceTree = "<group>"; };
 		C04A72D469A7809758A63C36F66594EF /* FLEXKeyboardShortcutManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXKeyboardShortcutManager.h; path = Classes/Utility/FLEXKeyboardShortcutManager.h; sourceTree = "<group>"; };
 		C071C936E0EAE27AD35C40D612CC4258 /* FLEXRuntimeUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXRuntimeUtility.m; path = Classes/Utility/FLEXRuntimeUtility.m; sourceTree = "<group>"; };
+		C224BDA0614773EEC2D2E47112BA51DE /* YHDebugToolSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YHDebugToolSDK.modulemap; sourceTree = "<group>"; };
 		C39DDEDD87BF0897F2A8FE3B395E1557 /* FLEXIvarEditorViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXIvarEditorViewController.m; path = Classes/Editing/FLEXIvarEditorViewController.m; sourceTree = "<group>"; };
 		C3D29FFC1D8C38D0E4341C4A68AC4D8B /* FLEXNetworkObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXNetworkObserver.m; path = Classes/Network/PonyDebugger/FLEXNetworkObserver.m; sourceTree = "<group>"; };
 		C3DBF652E11C25D9AD4669BF286D9588 /* FLEXLibrariesTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXLibrariesTableViewController.m; path = Classes/GlobalStateExplorers/FLEXLibrariesTableViewController.m; sourceTree = "<group>"; };
-		C4F69D475B1B0BD5311A43A87DE32421 /* YHDebugToolDicToModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolDicToModel.m; path = YHDebugToolSDK/Classes/YHDebugToolDicToModel.m; sourceTree = "<group>"; };
+		C4AFBF7826CA61138DB02B119381C0E2 /* YHDebugToolManger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolManger.h; path = YHDebugToolSDK/Classes/YHDebugToolManger.h; sourceTree = "<group>"; };
 		C519C8937406370B5D3B9466795061F6 /* FLEXNetworkTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXNetworkTransaction.h; path = Classes/Network/FLEXNetworkTransaction.h; sourceTree = "<group>"; };
 		C5CC3B07B4DC7E9F29BF98BBA1985F97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		C6483564D948CC2260C6F1A3B35BAC33 /* FLEXArgumentInputFontView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputFontView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputFontView.h; sourceTree = "<group>"; };
@@ -396,25 +399,23 @@
 		C99D9B8C9DFA2276042B9970D79EF46F /* FLEXArgumentInputSwitchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputSwitchView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputSwitchView.m; sourceTree = "<group>"; };
 		CADFFA23CCC84123D1C456FF673275A9 /* FLEXLiveObjectsTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXLiveObjectsTableViewController.m; path = Classes/GlobalStateExplorers/FLEXLiveObjectsTableViewController.m; sourceTree = "<group>"; };
 		CC52CEB1EC4EBFD21702D23A5B9A998F /* FLEXInstancesTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXInstancesTableViewController.h; path = Classes/GlobalStateExplorers/FLEXInstancesTableViewController.h; sourceTree = "<group>"; };
-		CD1CD5746621BD2349F8CD083438990C /* YHDebugToolEnvModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolEnvModel.h; path = YHDebugToolSDK/Classes/YHDebugToolEnvModel.h; sourceTree = "<group>"; };
 		CE8FF7CB6AC42262E46C90044CBC9825 /* FLEXTableContentCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXTableContentCell.m; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXTableContentCell.m; sourceTree = "<group>"; };
+		D0489CB8415AB7A9DD5218CBA8E21323 /* YHDebugToolSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHDebugToolSDK-prefix.pch"; sourceTree = "<group>"; };
 		D07A96535F0CB6BC008157E0CCD3B155 /* FLEXArgumentInputJSONObjectView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputJSONObjectView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputJSONObjectView.h; sourceTree = "<group>"; };
-		D16E88BC258E748FBD92DEC16F4894DC /* UIWindow+YHDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+YHDebugTool.m"; path = "YHDebugToolSDK/Classes/UIWindow+YHDebugTool.m"; sourceTree = "<group>"; };
-		D80AD7FF70239BD2C73EF4D17E163B16 /* YHDebugToolSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YHDebugToolSDK-dummy.m"; sourceTree = "<group>"; };
-		D83A9E61049DC25585E190893100B28A /* YHDebugToolSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YHDebugToolSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D84FDA9C0D02E877BD2E67871068DFAB /* FLEXLiveObjectsTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXLiveObjectsTableViewController.h; path = Classes/GlobalStateExplorers/FLEXLiveObjectsTableViewController.h; sourceTree = "<group>"; };
 		D9E21B32C925A4335227E0FC6756EA27 /* FLEXViewControllerExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXViewControllerExplorerViewController.m; path = Classes/ObjectExplorers/FLEXViewControllerExplorerViewController.m; sourceTree = "<group>"; };
+		DA2C3037C7FF6D620758DF2CCF3E0057 /* YHDebugToolEnvEditView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolEnvEditView.h; path = YHDebugToolSDK/Classes/YHDebugToolEnvEditView.h; sourceTree = "<group>"; };
 		DBCD057938F98D6728C4850AB0C3570A /* FLEXSystemLogTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXSystemLogTableViewController.m; path = Classes/GlobalStateExplorers/SystemLog/FLEXSystemLogTableViewController.m; sourceTree = "<group>"; };
 		DCA4E5212439F7DF841CE6D6CF89828A /* FLEXTableLeftCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXTableLeftCell.m; path = Classes/GlobalStateExplorers/DatabaseBrowser/FLEXTableLeftCell.m; sourceTree = "<group>"; };
 		DD7D66AC4A9604D8C2ADEC337F0FD81A /* Pods-YHDebugToolSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YHDebugToolSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		DF84CF21C031C408E8C1332C7F92F617 /* YHDebugToolSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolSDK.h; path = YHDebugToolSDK/Classes/YHDebugToolSDK.h; sourceTree = "<group>"; };
+		DFD789FC33B189B904E8154F9889411A /* YHDebugToolEnvListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolEnvListView.m; path = YHDebugToolSDK/Classes/YHDebugToolEnvListView.m; sourceTree = "<group>"; };
 		E26542728740BCF2F2830970B0C53382 /* FLEXArgumentInputFontView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputFontView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputFontView.m; sourceTree = "<group>"; };
 		E38A57EFA490AA56EE42A4DA0F6D5062 /* FLEXFieldEditorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXFieldEditorView.m; path = Classes/Editing/FLEXFieldEditorView.m; sourceTree = "<group>"; };
+		E4960DB17ACD9F926C16DDB03A4053BB /* YHDebugToolManger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolManger.m; path = YHDebugToolSDK/Classes/YHDebugToolManger.m; sourceTree = "<group>"; };
 		E5AF844FA459A13E4FBF60F9F8D845BB /* FLEXHierarchyTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXHierarchyTableViewController.h; path = Classes/ViewHierarchy/FLEXHierarchyTableViewController.h; sourceTree = "<group>"; };
-		E64D760FD3275D2E21C3B9F8C5D7E242 /* Pods_YHDebugToolSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDebugToolSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64D760FD3275D2E21C3B9F8C5D7E242 /* Pods_YHDebugToolSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHDebugToolSDK_Example.framework; path = "Pods-YHDebugToolSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C8C076B9D29F8E5EE72FF6CE64A7FB /* FLEXArgumentInputDateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputDateView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputDateView.h; sourceTree = "<group>"; };
 		EBFDCB846FED96AD807B4655027FEB9E /* FLEXArgumentInputFontsPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputFontsPickerView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputFontsPickerView.m; sourceTree = "<group>"; };
-		EC91B31F8919862F463C7118AFB58F7E /* YHDebugToolView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YHDebugToolView.m; path = YHDebugToolSDK/Classes/YHDebugToolView.m; sourceTree = "<group>"; };
 		ECD4C88FA3D0F4723BC9DE7272EAE7FA /* FLEXManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXManager.m; path = Classes/Manager/FLEXManager.m; sourceTree = "<group>"; };
 		EDC7A4A200B3C5DB11E57E169B7E45AB /* FLEXRuntimeUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXRuntimeUtility.h; path = Classes/Utility/FLEXRuntimeUtility.h; sourceTree = "<group>"; };
 		EE5EE03F173C88864C35DA0961657865 /* FLEXNetworkHistoryTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXNetworkHistoryTableViewController.m; path = Classes/Network/FLEXNetworkHistoryTableViewController.m; sourceTree = "<group>"; };
@@ -426,17 +427,16 @@
 		F3B30ACC751360643A021A0B2C785016 /* FLEXResources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXResources.h; path = Classes/Utility/FLEXResources.h; sourceTree = "<group>"; };
 		F497B6052A0235354966BC9D39FB46C1 /* FLEXCookiesTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXCookiesTableViewController.m; path = Classes/GlobalStateExplorers/FLEXCookiesTableViewController.m; sourceTree = "<group>"; };
 		F4AADC54A18C47E71F33F9CE4F77D14B /* FLEXImageExplorerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXImageExplorerViewController.m; path = Classes/ObjectExplorers/FLEXImageExplorerViewController.m; sourceTree = "<group>"; };
+		F4FBC909716103293F32ACCBD2451882 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F522CE8522237D4830ADC5837D541C72 /* FLEXLibrariesTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXLibrariesTableViewController.h; path = Classes/GlobalStateExplorers/FLEXLibrariesTableViewController.h; sourceTree = "<group>"; };
 		F6909CA707FBFC8FD1F46DD46E75A131 /* Pods-YHDebugToolSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHDebugToolSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		F7230738CCF1757A98DE1EC59C7712C7 /* YHDebugToolView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolView.h; path = YHDebugToolSDK/Classes/YHDebugToolView.h; sourceTree = "<group>"; };
-		F8767C55D33F0FC3134BEEFCA223F25A /* YHDebugToolSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHDebugToolSDK-umbrella.h"; sourceTree = "<group>"; };
 		F94E9CEF164CE2F2B388653A745C2705 /* FLEXArgumentInputColorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXArgumentInputColorView.m; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputColorView.m; sourceTree = "<group>"; };
 		FB70A3EDABA55A351AE5A966E1642CCF /* FLEXArgumentInputFontsPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXArgumentInputFontsPickerView.h; path = Classes/Editing/ArgumentInputViews/FLEXArgumentInputFontsPickerView.h; sourceTree = "<group>"; };
-		FBC21B05A87D0EE21EEC1F552F305EC7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FBEBA3140CC886BC3C4CB207E354FEFD /* FLEXViewControllerExplorerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXViewControllerExplorerViewController.h; path = Classes/ObjectExplorers/FLEXViewControllerExplorerViewController.h; sourceTree = "<group>"; };
 		FCEE74A14B6C8BD747AFA02968413C5F /* FLEXNetworkTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLEXNetworkTransaction.m; path = Classes/Network/FLEXNetworkTransaction.m; sourceTree = "<group>"; };
 		FDD0FA9CCF7BEE9624C36C48FE51A431 /* FLEXExplorerToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLEXExplorerToolbar.h; path = Classes/Toolbar/FLEXExplorerToolbar.h; sourceTree = "<group>"; };
 		FE2688236F6A0089D8B0DABE6B08151F /* Pods-YHDebugToolSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHDebugToolSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		FEF53C355502B8956E73880471DED1CD /* YHDebugToolEnvListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YHDebugToolEnvListView.h; path = YHDebugToolSDK/Classes/YHDebugToolEnvListView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,20 +458,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A286504ADAF44BAB691B859272477D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				085FF59557DEF847B514C2DF1E787DE4 /* FLEX.framework in Frameworks */,
+				18D7DD7035EF1A251516FD87981EBEDE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27A7B37951B376F6642D84ED145A4ACF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				31F607CC3E7A130A7635FA35550E8B57 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4D7363D1BAD66DBC464DDEC6E59E0F81 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80D07ABAC3B673959B4B93A0E096A406 /* FLEX.framework in Frameworks */,
-				2D1E4299BDA0009432D1BF7EEE15B533 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,32 +665,8 @@
 				A7B89092CAB46241AC9BBDB0277C7FF8 /* FLEXWindow.m */,
 				79948E5A18A8DD0743A6C8F4BEADC67D /* Support Files */,
 			);
+			name = FLEX;
 			path = FLEX;
-			sourceTree = "<group>";
-		};
-		5D890DA0739FE1CDE0B1AB65D078F4CA /* YHDebugToolSDK */ = {
-			isa = PBXGroup;
-			children = (
-				9332E31BB186D5C227CD62EED962D404 /* UIWindow+YHDebugTool.h */,
-				D16E88BC258E748FBD92DEC16F4894DC /* UIWindow+YHDebugTool.m */,
-				7D562548BCE9FBAE9B7A64D2E504CBF9 /* YHDebugToolDicToModel.h */,
-				C4F69D475B1B0BD5311A43A87DE32421 /* YHDebugToolDicToModel.m */,
-				A9AEEA4CAECCC6A41422D818A0699AC0 /* YHDebugToolEnvEditView.h */,
-				786EBAB00BD09230ABF30AFDD4FF7609 /* YHDebugToolEnvEditView.m */,
-				85CD8599FE10831CF6CF5ECAB065B3DF /* YHDebugToolEnvListView.h */,
-				6325C7180BB3626A03BD4B3D5D2269C8 /* YHDebugToolEnvListView.m */,
-				CD1CD5746621BD2349F8CD083438990C /* YHDebugToolEnvModel.h */,
-				58E313336D2BF3C9D18E8ECF52E8F72E /* YHDebugToolEnvModel.m */,
-				655CF55AC7B8C0BA8C39B9924EA36088 /* YHDebugToolManger.h */,
-				B92EBC605BF1832CC38CE5B962A4353D /* YHDebugToolManger.m */,
-				DF84CF21C031C408E8C1332C7F92F617 /* YHDebugToolSDK.h */,
-				F7230738CCF1757A98DE1EC59C7712C7 /* YHDebugToolView.h */,
-				EC91B31F8919862F463C7118AFB58F7E /* YHDebugToolView.m */,
-				AAEC7835A45223F6692015DEB8C8480B /* Pod */,
-				7BE3C7D33269154A320FE1618D034E04 /* Support Files */,
-			);
-			name = YHDebugToolSDK;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		79948E5A18A8DD0743A6C8F4BEADC67D /* Support Files */ = {
@@ -708,16 +684,16 @@
 			path = "../Target Support Files/FLEX";
 			sourceTree = "<group>";
 		};
-		7BE3C7D33269154A320FE1618D034E04 /* Support Files */ = {
+		815589600F7A31C7DA17B732624B354F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3BD3C689C9B97A7C6B4153AC7EEBEABD /* YHDebugToolSDK.modulemap */,
-				D80AD7FF70239BD2C73EF4D17E163B16 /* YHDebugToolSDK-dummy.m */,
-				3F5B454F3258060E6C7A75EC6EE335F2 /* YHDebugToolSDK-Info.plist */,
-				92965FA8F53DDFE30AC978D07FF24670 /* YHDebugToolSDK-prefix.pch */,
-				F8767C55D33F0FC3134BEEFCA223F25A /* YHDebugToolSDK-umbrella.h */,
-				544F796366F417DC855FB796DA3590A7 /* YHDebugToolSDK.debug.xcconfig */,
-				224ACEE512D0B4CC70FACAEA6F1A8CC5 /* YHDebugToolSDK.release.xcconfig */,
+				C224BDA0614773EEC2D2E47112BA51DE /* YHDebugToolSDK.modulemap */,
+				ADC255884A66728C049239252E6A43BF /* YHDebugToolSDK-dummy.m */,
+				98951FC6064FD8ECFBD54AED4A0B1246 /* YHDebugToolSDK-Info.plist */,
+				D0489CB8415AB7A9DD5218CBA8E21323 /* YHDebugToolSDK-prefix.pch */,
+				1CB405EE039D62D875EFCB418F8D6CEB /* YHDebugToolSDK-umbrella.h */,
+				51CC72398A1F4AEEB44B3D22AFF21136 /* YHDebugToolSDK.debug.xcconfig */,
+				4A4299C008C2798FE0FC37F8F8606F99 /* YHDebugToolSDK.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/YHDebugToolSDK";
@@ -731,14 +707,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		AAEC7835A45223F6692015DEB8C8480B /* Pod */ = {
+		A880E04775001CD0E42BE2B6EAE562C2 /* YHDebugToolSDK */ = {
 			isa = PBXGroup;
 			children = (
-				FBC21B05A87D0EE21EEC1F552F305EC7 /* LICENSE */,
-				5653FCD9371163C96BF0EEB32D0A276A /* README.md */,
-				D83A9E61049DC25585E190893100B28A /* YHDebugToolSDK.podspec */,
+				98791C601FFEEB1C88F851473E40C627 /* UIWindow+YHDebugTool.h */,
+				1B0144CB8A43682C050F7336923129E4 /* UIWindow+YHDebugTool.m */,
+				24546BDE9677D57AB221465B75A375A5 /* YHDebugToolDicToModel.h */,
+				ABEED8F2F47F05AEA151148D7936C2F6 /* YHDebugToolDicToModel.m */,
+				DA2C3037C7FF6D620758DF2CCF3E0057 /* YHDebugToolEnvEditView.h */,
+				7A0AD1589E84401F48C99D7BA00EE2CB /* YHDebugToolEnvEditView.m */,
+				FEF53C355502B8956E73880471DED1CD /* YHDebugToolEnvListView.h */,
+				DFD789FC33B189B904E8154F9889411A /* YHDebugToolEnvListView.m */,
+				B17E5C58FBEBCBC907BBFAD4533B3790 /* YHDebugToolEnvModel.h */,
+				AE87A0853DCD16FD321E3F1C8AD3C5D3 /* YHDebugToolEnvModel.m */,
+				C4AFBF7826CA61138DB02B119381C0E2 /* YHDebugToolManger.h */,
+				E4960DB17ACD9F926C16DDB03A4053BB /* YHDebugToolManger.m */,
+				42B6F098D1C63F0FF70ADE26B59FAB55 /* YHDebugToolSDK.h */,
+				4E58A8A6EABBF92B3C920C34DC61CFBA /* YHDebugToolView.h */,
+				1BFF29081AC15CE2F380BA7005D07B1A /* YHDebugToolView.m */,
+				EDA2FA29F95C9CBE329E5979E06A6383 /* Pod */,
+				815589600F7A31C7DA17B732624B354F /* Support Files */,
 			);
-			name = Pod;
+			name = YHDebugToolSDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		ADCC906511DAA83203E101F2C65903A9 /* Pods-YHDebugToolSDK_Example */ = {
@@ -769,16 +760,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BE003D67BF25DA67D5EA65A258E5B445 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A880E04775001CD0E42BE2B6EAE562C2 /* YHDebugToolSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				F88031F9C0BF961AA15D6DBFE12A0232 /* Development Pods */,
+				BE003D67BF25DA67D5EA65A258E5B445 /* Development Pods */,
 				479214F772FC2521F56381B13D282591 /* Frameworks */,
 				9E40F3EB8431D4807F5A6B46866F0C6A /* Pods */,
 				B43CEE5628E3E4595615ED0197AAB4C8 /* Products */,
 				326AB9D8A01B5F0533E9EBADDD34F867 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		EDA2FA29F95C9CBE329E5979E06A6383 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				627D40C3754A182C4AB4D7B486A73EC8 /* LICENSE */,
+				F4FBC909716103293F32ACCBD2451882 /* README.md */,
+				3A5C9924852369E41AEE45EB7EB7032B /* YHDebugToolSDK.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		F3FF2CA9E2B11E531358679E3B9EB4A7 /* Pods-YHDebugToolSDK_Tests */ = {
@@ -797,14 +806,6 @@
 			path = "Target Support Files/Pods-YHDebugToolSDK_Tests";
 			sourceTree = "<group>";
 		};
-		F88031F9C0BF961AA15D6DBFE12A0232 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5D890DA0739FE1CDE0B1AB65D078F4CA /* YHDebugToolSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -821,6 +822,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8310C3954DFE81C8B3079488B4B5FA0A /* Pods-YHDebugToolSDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1737C1018A3857A56915F552E5DFCCB5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0413BC8324AEDCF29D1922DC8482BD7 /* UIWindow+YHDebugTool.h in Headers */,
+				B6C252F097BF2521BD1410227816B6DC /* YHDebugToolDicToModel.h in Headers */,
+				B51277C5A10AC5418777BF54A1B742F9 /* YHDebugToolEnvEditView.h in Headers */,
+				C65F774C040AE36FCBA347CDE84903DA /* YHDebugToolEnvListView.h in Headers */,
+				0152EC2B6B4740F9E82CA92900C8793D /* YHDebugToolEnvModel.h in Headers */,
+				CE3910A90BD65B0E581CBC64E6F9E840 /* YHDebugToolManger.h in Headers */,
+				ACD41AF0DAD27D7867D4A40F11F5DAD5 /* YHDebugToolSDK-umbrella.h in Headers */,
+				0FC7D0DC0FBDCC2BF907013BC64CC3CF /* YHDebugToolSDK.h in Headers */,
+				7DF1BEEFA74BEACF51E4150C97BBB670 /* YHDebugToolView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,22 +928,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7223FBB50450344E2DE2F143296FB09 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F83B13A6B940A782EAA3478E303F190 /* UIWindow+YHDebugTool.h in Headers */,
-				70F66BB48F0A118026B7B474ADC13A8F /* YHDebugToolDicToModel.h in Headers */,
-				0F5D579BBB29079EF2AB88DC0F871A37 /* YHDebugToolEnvEditView.h in Headers */,
-				B9EC648EDCF86DD1424A7F905BE9A086 /* YHDebugToolEnvListView.h in Headers */,
-				DEB360489CBEEDE12A3781F1F30038A5 /* YHDebugToolEnvModel.h in Headers */,
-				465C52D580E3E136DBF4091C491F30B9 /* YHDebugToolManger.h in Headers */,
-				3A71C806DFCF30C63DF28120ECCC21D7 /* YHDebugToolSDK-umbrella.h in Headers */,
-				02DD67A5FB7AD428D80960DE51B6DD88 /* YHDebugToolSDK.h in Headers */,
-				02E1EB45157D82D32D000E7DB840DA20 /* YHDebugToolView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -989,17 +990,17 @@
 		};
 		D69B962B3F74DF2B58FE518F09C0FE7F /* YHDebugToolSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F24B7F0773CEC7FBD9E24EF74208EC3A /* Build configuration list for PBXNativeTarget "YHDebugToolSDK" */;
+			buildConfigurationList = A125A54A3A3E42DE1D34457D4A5A6A87 /* Build configuration list for PBXNativeTarget "YHDebugToolSDK" */;
 			buildPhases = (
-				E7223FBB50450344E2DE2F143296FB09 /* Headers */,
-				FFD37CEB7956CC66FBE7E277010A30FE /* Sources */,
-				4D7363D1BAD66DBC464DDEC6E59E0F81 /* Frameworks */,
-				80468C575DDDD3E45C4D889A4C8393D5 /* Resources */,
+				1737C1018A3857A56915F552E5DFCCB5 /* Headers */,
+				8AB20A486DA88A74B62C04EB3D6CF22D /* Sources */,
+				1A286504ADAF44BAB691B859272477D2 /* Frameworks */,
+				A1C859837FECE974AE4C67B234970C6B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				19786FE0198475693E6756495653C22D /* PBXTargetDependency */,
+				D1A1C9D92EC723882DDC6DE7DBB6E3E2 /* PBXTargetDependency */,
 			);
 			name = YHDebugToolSDK;
 			productName = YHDebugToolSDK;
@@ -1058,7 +1059,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80468C575DDDD3E45C4D889A4C8393D5 /* Resources */ = {
+		A1C859837FECE974AE4C67B234970C6B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1167,30 +1168,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFD37CEB7956CC66FBE7E277010A30FE /* Sources */ = {
+		8AB20A486DA88A74B62C04EB3D6CF22D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5475E9734B4D99AEA5AF7F27293EEDF /* UIWindow+YHDebugTool.m in Sources */,
-				82D0283ECB088B617237DDC0BC7304CF /* YHDebugToolDicToModel.m in Sources */,
-				588E087F797DA5FF76B9935D9386E855 /* YHDebugToolEnvEditView.m in Sources */,
-				2500FA7DF2F6207190D45033BD6A192C /* YHDebugToolEnvListView.m in Sources */,
-				E4B7FD640E564B8B41A9A086FB182440 /* YHDebugToolEnvModel.m in Sources */,
-				5942EE5620403814BFEEA36B51515407 /* YHDebugToolManger.m in Sources */,
-				C8CBE2AD53C2AEB4F6A5C2C1468D05D8 /* YHDebugToolSDK-dummy.m in Sources */,
-				7FBC55B625DC662848EDD82DD3F30786 /* YHDebugToolView.m in Sources */,
+				E3D362E192CAAF1B9FC45BC0CCFC3528 /* UIWindow+YHDebugTool.m in Sources */,
+				014BD0E2709D3CC203CEB1A9A92FC91B /* YHDebugToolDicToModel.m in Sources */,
+				E3E568A0555249941DF3976B49ECD90F /* YHDebugToolEnvEditView.m in Sources */,
+				329195B0D41805BA6797B7CE11E8613A /* YHDebugToolEnvListView.m in Sources */,
+				78612D8F08F98F3B8B2E9A567541B58B /* YHDebugToolEnvModel.m in Sources */,
+				56026E17F0A4A3C375D01B1F1A585822 /* YHDebugToolManger.m in Sources */,
+				66554C24891CA44809F3387124EB1F9D /* YHDebugToolSDK-dummy.m in Sources */,
+				2B2F5E5DBC360000595EF1CCD33DD7EF /* YHDebugToolView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		19786FE0198475693E6756495653C22D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FLEX;
-			target = 3AEC09E383B46D12E00628362EB86D67 /* FLEX */;
-			targetProxy = 4AC16EAE096A969C4D70FADF3B584A41 /* PBXContainerItemProxy */;
-		};
 		33B7ACAA5EC00D7656A03E7E5460E107 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-YHDebugToolSDK_Example";
@@ -1209,9 +1204,47 @@
 			target = 3AEC09E383B46D12E00628362EB86D67 /* FLEX */;
 			targetProxy = 8AF295829747C78E665DBCD4635D9039 /* PBXContainerItemProxy */;
 		};
+		D1A1C9D92EC723882DDC6DE7DBB6E3E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLEX;
+			target = 3AEC09E383B46D12E00628362EB86D67 /* FLEX */;
+			targetProxy = 1615DD2594A1A0CEC19B4F8BF69B0297 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		00B37CE0C7E071B32C92147C3822A4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4299C008C2798FE0FC37F8F8606F99 /* YHDebugToolSDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK.modulemap";
+				PRODUCT_MODULE_NAME = YHDebugToolSDK;
+				PRODUCT_NAME = YHDebugToolSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		033D0C41FC3A266CBA44539FFE58A9C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E4B31075F9E029AEE6484505CFF416C /* FLEX.debug.xcconfig */;
@@ -1233,37 +1266,6 @@
 				MODULEMAP_FILE = "Target Support Files/FLEX/FLEX.modulemap";
 				PRODUCT_MODULE_NAME = FLEX;
 				PRODUCT_NAME = FLEX;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1660A24FCF3BC7B0A0FE3FA7D82C5993 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 544F796366F417DC855FB796DA3590A7 /* YHDebugToolSDK.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK.modulemap";
-				PRODUCT_MODULE_NAME = YHDebugToolSDK;
-				PRODUCT_NAME = YHDebugToolSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1341,38 +1343,6 @@
 			};
 			name = Debug;
 		};
-		3FDB621C6D6DC41C58AB912A34DF413E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 224ACEE512D0B4CC70FACAEA6F1A8CC5 /* YHDebugToolSDK.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK.modulemap";
-				PRODUCT_MODULE_NAME = YHDebugToolSDK;
-				PRODUCT_NAME = YHDebugToolSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1426,7 +1396,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1562,6 +1533,37 @@
 			};
 			name = Release;
 		};
+		A35C98D296E669A2B11017C6D18298BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51CC72398A1F4AEEB44B3D22AFF21136 /* YHDebugToolSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YHDebugToolSDK/YHDebugToolSDK.modulemap";
+				PRODUCT_MODULE_NAME = YHDebugToolSDK;
+				PRODUCT_NAME = YHDebugToolSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DD6A66A31F677B488A704EE76BE3B593 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 125DCBE87B17241306F0D2DC87C2BF81 /* Pods-YHDebugToolSDK_Example.debug.xcconfig */;
@@ -1625,20 +1627,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A125A54A3A3E42DE1D34457D4A5A6A87 /* Build configuration list for PBXNativeTarget "YHDebugToolSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A35C98D296E669A2B11017C6D18298BB /* Debug */,
+				00B37CE0C7E071B32C92147C3822A4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6DE17C4C905E52FC67457B246A76A5D /* Build configuration list for PBXNativeTarget "Pods-YHDebugToolSDK_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FB2905230DE970A95EAFFEB195F9BE8 /* Debug */,
 				9CEE604E5E7B52028CB20E751A96663E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F24B7F0773CEC7FBD9E24EF74208EC3A /* Build configuration list for PBXNativeTarget "YHDebugToolSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1660A24FCF3BC7B0A0FE3FA7D82C5993 /* Debug */,
-				3FDB621C6D6DC41C58AB912A34DF413E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
