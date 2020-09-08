@@ -9,7 +9,6 @@
 
 @interface YHDebugToolEnvModel()
 
-//@property(nonatomic,copy)NSString *currentUrl;
 
 @end
 
@@ -19,58 +18,104 @@
     self = [super init];
     
     if (self) {
-        self.pre_productUrl = @"进入编辑";
+        self.preProductUrl = @"进入编辑";
         self.devUrl = @"";
         self.testUrl = @"";
         self.productUrl = @"";
-        self.editUrl = @"";
     }
     return self;
 }
 
 -(NSString *)getCurrentEnvName{
-    return [self getEnvNameWithUrl:self.currentUrl];
+    return [YHDebugToolEnvModel getEnvNameByType:self.currentEnvType];
 }
 
-/// 重写当前环境
-/// @param productUrl 正式环境
--(void)setProductUrl:(NSString *)productUrl{
-    _productUrl = productUrl;
-    
-    //如果当前环境为空，默认则为正式地址
-    if ([@"" isEqualToString:self.currentUrl] ||
-        nil == self.currentUrl) {
-        _currentUrl = productUrl;
-    }
+-(NSString *)getCurrentEnvUrl{
+    return [self getEnvUrlByType:self.currentEnvType];
 }
 
--(void)editWithNewUrl:(NSString *)url{
++(NSString *)getEnvNameByType:(YHDebugToolEnvType)type{
     
-    if ([self.editUrl isEqualToString:self.productUrl]) {
-        self.productUrl = url;
-    }else if ([self.editUrl isEqualToString:self.pre_productUrl]) {
-        self.pre_productUrl = url;
-    }else if ([self.editUrl isEqualToString:self.devUrl]) {
-        self.devUrl = url;
-    }else if ([self.editUrl isEqualToString:self.testUrl]) {
-        self.testUrl = url;
+    switch (type) {
+        case 0:
+            return @"正式环境";
+            break;
+        case 1:
+            return @"开发环境";
+            break;
+        case 2:
+            return @"测试环境";
+            break;
+        case 3:
+            return @"预正式环境";
+            break;
+        default:
+            break;
     }
-    self.editUrl = url;
-    
+    return @"未知环境";
 }
 
--(NSString *)getEnvNameWithUrl:(NSString *)url{
-    
-    if ([url isEqualToString:self.productUrl]) {
-        return @"正式环境";
-    }else if ([url isEqualToString:self.pre_productUrl]) {
-        return @"预正式环境";
-    }else if ([url isEqualToString:self.devUrl]) {
-        return @"开发环境";
-    }else if ([url isEqualToString:self.testUrl]) {
-        return @"测试环境";
+-(NSString *)getEnvUrlByType:(YHDebugToolEnvType)type{
+    switch (type) {
+        case 0:
+            return self.productUrl;
+            break;
+        case 1:
+            return self.devUrl;
+            break;
+        case 2:
+            return self.testUrl;
+            break;
+        case 3:
+            return self.preProductUrl;
+            break;
+        default:
+            break;
     }
-    return @"未知";
+    return @"未知环境";
+}
+
+-(NSString *)getEditEnvName{
+    return [YHDebugToolEnvModel getEnvNameByType:self.editEnvType];
+}
+
+-(NSString *)getEditEnvUrl{
+    return [self getEnvUrlByType:self.editEnvType];
+}
+-(void)resetWithNewUrl:(NSString *)url toEnv:(YHDebugToolEnvType)envType{
+    switch (envType) {
+        case 0:
+            self.productUrl = url;
+            break;
+        case 1:
+            self.devUrl = url;
+            break;
+        case 2:
+            self.testUrl = url;
+            break;
+        case 3:
+            self.preProductUrl = url;
+            break;
+        default:
+            break;
+    }
+}
+#pragma mark - debugDelegate
+
+- (NSString * _Nullable)getDebugDevUrl {
+    return self.devUrl;
+}
+
+- (NSString * _Nullable)getDebugPreProductUrl {
+    return self.preProductUrl;
+}
+
+- (NSString * _Nullable)getDebugProductUrl {
+    return self.productUrl;
+}
+
+- (NSString * _Nullable)getDebugTestUrl {
+    return self.testUrl;
 }
 
 @end

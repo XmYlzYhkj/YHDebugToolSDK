@@ -8,10 +8,13 @@
 
 #import "YHDebugToolManger.h"
 #import "YHDebugToolDicToModel.h"
+#import "YHDebugToolView.h"
 
 #if DEBUG
 #import <FLEX/FLEX.h>
 #endif
+
+static NSInteger YHDebugToolView_Tag = 123321;
 
 @interface YHDebugToolManger()
 
@@ -39,16 +42,40 @@
     return self;
 }
 
--(void)showDebugView{
++(void)showConfirmAlert{
     
+    NSInteger tag = YHDebugToolView_Tag;
+    UIApplication *app = [UIApplication sharedApplication];
+    UIView *superView = app.delegate.window.rootViewController.view;
+    
+    if ([superView viewWithTag:tag] == nil) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请确认是否进入debug主页" preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:cancelAction];
+
+        UIAlertAction *debugAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [YHDebugToolManger showHomePage];
+        }];
+        [alert addAction:debugAction];
+        
+        [app.delegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    }else{
+        
+    }
+}
+
++(void)showHomePage{
+    YHDebugToolView *debugView = [[YHDebugToolView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    debugView.tag = YHDebugToolView_Tag;
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    UIView *superView = app.delegate.window.rootViewController.view;
+    [superView addSubview:debugView];
 }
 
 +(void)showNetDebugView{
     [[FLEXManager sharedManager] showExplorer];
-}
-
--(void)showDevEnvDebugView{
-    
 }
 
 #pragma mark - lazy loading
@@ -78,9 +105,7 @@
     NSString *filename=[self getEnvFileName];
     NSFileManager* fm = [NSFileManager defaultManager];
     
-    if ([fm fileExistsAtPath:filename]) {
-        
-    }else{
+    if (![fm fileExistsAtPath:filename]) {
         [fm createFileAtPath:filename contents:nil attributes:nil];
     }
     
@@ -125,9 +150,7 @@
             YHDebugToolEnvModel *model = [YHDebugToolDicToModel modelWithDict:originalDic className:@"YHDebugToolEnvModel"];
             
             [dic setValue:model forKey:key];
-            NSLog(@"ok = %@",@"ok");
         }
-        
         
         [self.lock lock];
         [YHDebugToolManger shareInstance].envModelForModules = dic;
@@ -156,32 +179,30 @@
     return filename;
 }
 
-
--(void)testData{
-    YHDebugToolEnvModel *modelA = [YHDebugToolEnvModel new];
-    modelA.productUrl = @"http:product_modelA";
-    modelA.testUrl = @"http:test_modelA";
-    modelA.devUrl = @"http:dev_modelA";
-    modelA.moduleName = @"在线问诊A";
-    modelA.moduleId = @"YH_modelA";
-    
-    YHDebugToolEnvModel *modelB = [YHDebugToolEnvModel new];
-    modelB.productUrl = @"http:product_modelB";
-    modelB.testUrl = @"http:test_modelB";
-    modelB.devUrl = @"http:dev_modelB";
-    modelB.moduleName = @"社保查询";
-    modelB.moduleId = @"YH_modelB";
-    
-    YHDebugToolEnvModel *modelC = [YHDebugToolEnvModel new];
-    modelC.productUrl = @"http:product_modelC";
-    modelC.testUrl = @"http:test_modelC";
-    modelC.devUrl = @"http:dev_modelC";
-    modelC.moduleName = @"在线取药";
-    modelC.moduleId = @"YH_modelC";
-    
-    [self.envModelForModules setValue:modelA forKey:modelA.moduleId];
-    [self.envModelForModules setValue:modelB forKey:modelB.moduleId];
-    [self.envModelForModules setValue:modelC forKey:modelC.moduleId];
-    
+-(NSString *)getUrlWithModuleId:(NSString *)moduleId withType:(YHDebugToolEnvType)envType{
+    YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleId];
+    //如果模块不存在
+    if (model == nil) {
+        return [NSString stringWithFormat:@"module: [%@] no exists",moduleId];
+    }else{
+        switch (envType) {
+            case YHDebugToolEnvTypeDev:
+                return model.devUrl;
+                break;
+            case YHDebugToolEnvTypeTest:
+                return model.testUrl;
+                break;
+            case YHDebugToolEnvTypePreProduct:
+                return model.preProductUrl;
+                break;
+            case YHDebugToolEnvTypeProduct:
+                return model.productUrl;
+                break;
+            default:
+                return model.productUrl;
+                break;
+        }
+    }
 }
+
 @end

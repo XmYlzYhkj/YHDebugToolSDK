@@ -158,7 +158,7 @@
     
     NSString *envUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
     
-    NSString *check = [model.currentUrl isEqualToString:envUrl]? @"✅":@"";
+    NSString *check = model.currentEnvType == indexPath.row? @"✅":@"";
     return [NSString stringWithFormat:@"%@%@:%@",
             check,
             [self getEnvNameByRow:indexPath.row],
@@ -197,7 +197,7 @@
         return model.testUrl;
             break;
         case 3:
-            return model.pre_productUrl;
+            return model.preProductUrl;
         break;
         default:
             break;

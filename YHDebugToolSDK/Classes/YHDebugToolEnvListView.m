@@ -73,11 +73,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     YHDebugToolEnvModel *model = [self getEnvModelWithIndexPath:indexPath];
-    
-    model.currentUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
+    model.currentEnvType = indexPath.row;
     
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = model.currentUrl;
+    pasteboard.string = [model getCurrentEnvUrl];
     
     [tableView reloadData];
     
@@ -110,15 +109,9 @@
     return footerView;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.01;
 }
-
-//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return UITableViewCellEditingStyleInsert;
-//}
 
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -126,7 +119,7 @@
     UITableViewRowAction *editRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         
         YHDebugToolEnvModel *model = [self getEnvModelWithIndexPath:indexPath];
-        model.editUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
+        model.editEnvType = indexPath.row;
         
         YHDebugToolEnvEditView *editView = [[YHDebugToolEnvEditView alloc] initWithModel:model];
         [editView setEditBlock:^{
@@ -138,34 +131,22 @@
         
         NSLog(@"点击了编辑");
     }];
+    
     editRowAction.backgroundColor = [UIColor purpleColor];
     
-    if(indexPath.section > 0)
-    {
-        return @[editRowAction];
-    }
-    
-    return @[];
+    return @[editRowAction];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
-
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//
-//    if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        NSLog(@"styleNone");
-//    }
-//}
 
 #pragma mark - lazy loading
 
 -(UIButton *)closeBtn{
     if (!_closeBtn) {
         _closeBtn = [[UIButton alloc] init];
-        [_closeBtn setTitle:@"⬅️返回功能界面⬅️" forState:UIControlStateNormal];
+        [_closeBtn setTitle:@"⬅️返回主页⬅️" forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [_closeBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
         _closeBtn.layer.borderColor = [UIColor redColor].CGColor;
@@ -196,33 +177,11 @@
     
     YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
     
-    NSString *envUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
-    
-    NSString *check = [model.currentUrl isEqualToString:envUrl]? @"✅":@"";
+    NSString *check = model.currentEnvType == indexPath.row? @"✅":@"";
     return [NSString stringWithFormat:@"%@%@:%@",
             check,
-            [self getEnvNameByRow:indexPath.row],
-            envUrl];
-}
-
--(NSString *)getEnvNameByRow:(NSInteger)row{
-    switch (row) {
-        case 0:
-            return @"正式环境";
-            break;
-        case 1:
-            return @"开发环境";
-            break;
-        case 2:
-            return @"测试环境";
-        break;
-        case 3:
-            return @"预正式环境";
-        break;
-        default:
-            break;
-    }
-    return @"未知环境";
+            [YHDebugToolEnvModel getEnvNameByType:indexPath.row],
+            [model getEnvUrlByType:indexPath.row]];
 }
 
 -(NSString *)getEnvUrlByRow:(NSInteger)row withModel:(YHDebugToolEnvModel *)model{
@@ -237,7 +196,7 @@
         return model.testUrl;
             break;
         case 3:
-            return model.pre_productUrl;
+            return model.preProductUrl;
         break;
         default:
             break;

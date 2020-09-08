@@ -10,11 +10,6 @@
 #import "YHDebugToolEnvModel.h"
 
 
-#define  YH_Debug_StatusBarHeight  [UIApplication sharedApplication].statusBarFrame.size.height
-
-// Navigation bar height.
-#define  YH_Debug_NavigationBarHeight  44.f
-
 @interface YHDebugToolEnvEditView()<UITextViewDelegate>
 
 /// 取消
@@ -82,27 +77,21 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
+    self.currentModuleLabel.frame = [self frameWithNum:0];
+    
+    self.currentEnvNameLabel.frame = [self frameWithNum:1];
+    
+    self.currentEnvTextLabel.frame = [self frameWithNum:2];
+    
+    self.currentNewEnvLabel.frame = [self frameWithNum:3];
+    
+    self.textView.frame = [self frameWithNum:4];;
+    
     CGRect frame = self.frame;
     
-    CGFloat height = 50;
-    CGFloat y = YH_Debug_StatusBarHeight + YH_Debug_NavigationBarHeight + 270; //CGRectGetHeight(frame) - height;
+    CGFloat y = [UIApplication sharedApplication].statusBarFrame.size.height + 44 + 270;
+    
     CGFloat width = CGRectGetWidth(frame)/2;
-    
-    self.cancelBtn.frame = CGRectMake(0, y, width, 50);
-    
-    self.confirmBtn.frame = CGRectMake(width, y, width, 50);
-    
-    CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width - 40;
-    
-    self.currentModuleLabel.frame = CGRectMake(20, YH_Debug_StatusBarHeight + YH_Debug_NavigationBarHeight, labelWidth, 50);
-    
-    self.currentEnvNameLabel.frame = CGRectMake(20, YH_Debug_StatusBarHeight + YH_Debug_NavigationBarHeight + 50, labelWidth, 50);
-    
-    self.currentEnvTextLabel.frame = CGRectMake(20, YH_Debug_StatusBarHeight + YH_Debug_NavigationBarHeight + 100, labelWidth, 50);
-    
-    self.currentNewEnvLabel.frame = CGRectMake(20, YH_Debug_StatusBarHeight + YH_Debug_NavigationBarHeight + 150, labelWidth, 50);
-    
-    self.textView.frame = CGRectMake(20, YH_Debug_StatusBarHeight + YH_Debug_NavigationBarHeight + 200, labelWidth, 50);
     
     self.cancelBtn.frame = CGRectMake(10, y, width - 20, 50);
     
@@ -111,6 +100,12 @@
     [self reloadData];
 }
 
+-(CGRect)frameWithNum:(NSInteger)num{
+    
+    CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width - 40;
+    
+    return CGRectMake(20, [UIApplication sharedApplication].statusBarFrame.size.height + 44 + 50 * num, labelWidth, 50);
+}
 
 #pragma mark - lazy loading
 
@@ -207,8 +202,8 @@
         NSLog(@"保存");
         
         if (self.textView.text.length > 0) {
+            [self.editModel resetWithNewUrl:self.textView.text toEnv:self.editModel.editEnvType];
             
-            [self.editModel editWithNewUrl:self.textView.text];
             if (self.editBlock) {
                 self.editBlock();
             }
@@ -220,11 +215,11 @@
 
 -(void)reloadData{
     
-    self.currentModuleLabel.text = [NSString stringWithFormat:@"当前模块：%@",self.editModel.moduleName];
+    self.currentModuleLabel.text = [NSString stringWithFormat:@"编辑模块：%@",self.editModel.moduleName];
     
-    self.currentEnvNameLabel.text = [NSString stringWithFormat:@"当前环境：%@",[self.editModel getEnvNameWithUrl:self.editModel.editUrl]];
-    
-    self.currentEnvTextLabel.text = [NSString stringWithFormat:@"当前地址：%@",self.editModel.editUrl];
+    self.currentEnvNameLabel.text = [NSString stringWithFormat:@"编辑环境：%@",[self.editModel getEditEnvName]];
+
+    self.currentEnvTextLabel.text = [NSString stringWithFormat:@"当前地址：%@",[self.editModel getEditEnvUrl]];
     
     self.currentNewEnvLabel.text = [NSString stringWithFormat:@"新地址：%@",@""];
     

@@ -113,7 +113,12 @@ typedef NS_ENUM(NSInteger, YHDebugJSONModelDataType) {
 
     for (int i = 0; i < count; i ++) {
         // 取得成员名
+        if (nil == ivars[i]) {
+            break;
+        }
+        
         NSString *memberName = [NSString stringWithUTF8String:ivar_getName(ivars[i])];
+        
         const char *type = ivar_getTypeEncoding(ivars[i]);
         NSString *dataType =  [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
         
@@ -174,7 +179,10 @@ typedef NS_ENUM(NSInteger, YHDebugJSONModelDataType) {
                         break;
                 }
                 
-                [model setValue:propertyValue forKey:memberName];
+                if (memberName != nil) {
+                    [model setValue:propertyValue forKey:memberName];
+                }
+                
                 break;
             }
         }

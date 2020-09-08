@@ -16,6 +16,7 @@
 #import "YHDebugToolEnvListView.h"
 #import "YHDebugToolEnvModel.h"
 #import "YHDebugToolManger.h"
+#import "YHDebugToolSDK.h"
 #import "YHDebugToolView.h"
 
 FOUNDATION_EXPORT double YHDebugToolSDKVersionNumber;
