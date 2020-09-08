@@ -52,7 +52,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [YHDebugToolManger shareInstance].envModelForModules.allKeys.count;
+    return [YHDebugToolManger getAllModluleIds].count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -76,7 +76,10 @@
     model.currentEnvType = indexPath.row;
     
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = [model getCurrentEnvUrl];
+    
+    if ([model getCurrentEnvUrl] != nil) {
+        pasteboard.string = [model getCurrentEnvUrl];
+    }
     
     [tableView reloadData];
     
@@ -89,9 +92,11 @@
 {
     UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"UITableViewHeaderFooterView"];
     
-    NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
+    NSArray *array = [YHDebugToolManger getAllModluleIds];
     
-    headerView.textLabel.text = [NSString stringWithFormat:@"模块：%@",array[section]];
+    YHDebugToolEnvModel *model = [YHDebugToolManger getModuleEnvModelWithId:array[section]];
+    
+    headerView.textLabel.text = [NSString stringWithFormat:@"模块：%@",model.moduleName];
     return headerView;
 }
 
@@ -171,11 +176,11 @@
 #pragma mark - business acton
 
 -(NSString *)getCellText:(NSIndexPath *)indexPath{
-    NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
+    NSArray *array = [YHDebugToolManger getAllModluleIds];
     
-    NSString *moduleKey = array[indexPath.section];
+    NSString *moduleId = array[indexPath.section];
     
-    YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
+    YHDebugToolEnvModel *model = [YHDebugToolManger getModuleEnvModelWithId:moduleId];
     
     NSString *check = model.currentEnvType == indexPath.row? @"✅":@"";
     return [NSString stringWithFormat:@"%@%@:%@",
@@ -205,10 +210,12 @@
 }
 
 -(YHDebugToolEnvModel *)getEnvModelWithIndexPath:(NSIndexPath *)indexPath{
-    NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
-    NSString *moduleKey = array[indexPath.section];
-    YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
     
+    NSArray *array = [YHDebugToolManger getAllModluleIds];
+    
+    NSString *moduleId = array[indexPath.section];
+    
+    YHDebugToolEnvModel *model = [YHDebugToolManger getModuleEnvModelWithId:moduleId];
     return model;
 }
 

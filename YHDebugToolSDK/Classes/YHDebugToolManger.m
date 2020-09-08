@@ -18,6 +18,9 @@ static NSInteger YHDebugToolView_Tag = 123321;
 
 @interface YHDebugToolManger()
 
+/// 模块配置环境
+@property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *envModelForModules;
+
 @property(nonatomic,strong)NSLock *lock;
 
 @end
@@ -119,8 +122,14 @@ static NSInteger YHDebugToolView_Tag = 123321;
     
     [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
         YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[key];
+
+        NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] initWithDictionary:[YHDebugToolDicToModel dictionaryWithModel:model]];
         
-        [dic setValue:[YHDebugToolDicToModel dictionaryWithModel:model] forKey:key];
+        //默认为保存以4个字段，手动移除 edit by zxl
+        NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"];
+        [mutableDic removeObjectsForKeys:filters];
+        
+        [dic setValue:mutableDic forKey:key];
     }];
     
     BOOL isSuccess = [dic writeToFile:filename atomically:YES];
@@ -146,7 +155,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
         
         for (NSString *key in dataDic.allKeys) {
             NSDictionary *originalDic = dataDic[key];
-
+            
             YHDebugToolEnvModel *model = [YHDebugToolDicToModel modelWithDict:originalDic className:@"YHDebugToolEnvModel"];
             
             [dic setValue:model forKey:key];
@@ -179,7 +188,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
     return filename;
 }
 
--(NSString *)getUrlWithModuleId:(NSString *)moduleId withType:(YHDebugToolEnvType)envType{
++(NSString *)getUrlWithModuleId:(NSString *)moduleId withType:(YHDebugToolEnvType)envType{
     YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleId];
     //如果模块不存在
     if (model == nil) {
@@ -205,4 +214,38 @@ static NSInteger YHDebugToolView_Tag = 123321;
     }
 }
 
++(void)resetEnv{
+    NSArray *array = [[YHDebugToolManger shareInstance].envModelForModules allValues];
+    
+    [array enumerateObjectsUsingBlock:^(YHDebugToolEnvModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+        model.currentEnvType = YHDebugToolEnvTypeProduct;
+    }];
+}
+
++(YHDebugToolEnvModel *)getModuleEnvModelWithId:(NSString *)moduleId{
+    return [YHDebugToolManger shareInstance].envModelForModules[moduleId];
+}
+
+/// 获取所有模块的ID
++(NSArray *)getAllModluleIds{
+    return [YHDebugToolManger shareInstance].envModelForModules.allKeys;
+}
+
++(void)addModuleModel:(YHDebugToolEnvModel *)model{
+    if (model.moduleId == nil ||
+        [@"" isEqualToString:model.moduleId] ||
+        nil == model) {
+        return;
+    }
+    [[YHDebugToolManger shareInstance].lock lock];
+    [[YHDebugToolManger shareInstance].envModelForModules setValue:model forKey:model.moduleId];
+    [[YHDebugToolManger shareInstance].lock unlock];
+}
+
++(void)removeModuleModelById:(NSString *)moduleId{
+    
+    [[YHDebugToolManger shareInstance].lock lock];
+    [[YHDebugToolManger shareInstance].envModelForModules removeObjectForKey:moduleId];
+    [[YHDebugToolManger shareInstance].lock unlock];
+}
 @end

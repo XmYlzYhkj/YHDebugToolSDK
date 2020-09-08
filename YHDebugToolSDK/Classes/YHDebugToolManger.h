@@ -13,9 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YHDebugToolManger : NSObject
 
-/// 模块配置环境
-@property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *envModelForModules;
-
 /// 全局
 + (instancetype)shareInstance;
 
@@ -28,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 显示网络调试界面
 + (void)showNetDebugView;
 
+/// 重置所有模块的开发环境，统一以product为默认环境
++ (void)resetEnv;
+
 /// 读取环境数据
 - (void)readEnvData;
 
@@ -37,7 +37,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取根据模块id获取模块中的不同地址
 /// @param moduleId 模块ID
 /// @param envType 地址类型
-- (NSString *)getUrlWithModuleId:(NSString *)moduleId withType:(YHDebugToolEnvType)envType;
++ (NSString *)getUrlWithModuleId:(NSString *)moduleId withType:(YHDebugToolEnvType)envType;
+
+/// 根据模块ID获取数据
+/// @param moduleId 模块ID
++(YHDebugToolEnvModel *)getModuleEnvModelWithId:(NSString *)moduleId;
+
+/// 获取所有模块的ID
++(NSArray *)getAllModluleIds;
+
+/// 添加模块环境
+/// @param model 环境模型
++(void)addModuleModel:(YHDebugToolEnvModel *)model;
+
+/// 根据模块id移除模块环境
+/// @param moduleId 模块id
++(void)removeModuleModelById:(NSString *)moduleId;
 
 @end
 

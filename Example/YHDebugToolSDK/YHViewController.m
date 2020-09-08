@@ -60,10 +60,8 @@
     modelC.moduleName = @"在线取药";
     modelC.moduleId = @"YH_modelC";
     
-    NSMutableDictionary *modules = [YHDebugToolManger shareInstance].envModelForModules;
-    
-    [modules setValue:modelA forKey:modelA.moduleId];
-    [modules setValue:modelB forKey:modelB.moduleId];
-    [modules setValue:modelC forKey:modelC.moduleId];
+    [YHDebugToolManger addModuleModel:modelA];
+    [YHDebugToolManger addModuleModel:modelB];
+    [YHDebugToolManger addModuleModel:modelC];
 }
 @end

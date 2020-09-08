@@ -8,13 +8,13 @@
 #import "YHDebugToolDicToModel.h"
 #import <objc/runtime.h>
 
-typedef NS_ENUM(NSInteger, YHDebugJSONModelDataType) {
-    YHDebugJSONModelDataTypeObject    = 0,
-    YHDebugJSONModelDataTypeBOOL      = 1,
-    YHDebugJSONModelDataTypeInteger   = 2,
-    YHDebugJSONModelDataTypeFloat     = 3,
-    YHDebugJSONModelDataTypeDouble    = 4,
-    YHDebugJSONModelDataTypeLong      = 5,
+typedef NS_ENUM(NSInteger, YHDebugJSONDataType) {
+    YHDebugJSONDataTypeObject    = 0,
+    YHDebugJSONDataTypeBOOL      = 1,
+    YHDebugJSONDataTypeInteger   = 2,
+    YHDebugJSONDataTypeFloat     = 3,
+    YHDebugJSONDataTypeDouble    = 4,
+    YHDebugJSONDataTypeLong      = 5,
 };
 
 @implementation YHDebugToolDicToModel
@@ -60,6 +60,7 @@ typedef NS_ENUM(NSInteger, YHDebugJSONModelDataType) {
         
         [dict setObject:propertyValue forKey:propertyName];
     }
+    free(properties);
     return [dict copy];
 }
 
@@ -88,6 +89,8 @@ typedef NS_ENUM(NSInteger, YHDebugJSONModelDataType) {
         [propertiesArray addObject:propertyName];
     }
     
+    free(properties);
+    
     return [propertiesArray copy];
 }
 
@@ -111,82 +114,89 @@ typedef NS_ENUM(NSInteger, YHDebugJSONModelDataType) {
     objc_property_t *properties = class_copyPropertyList(classObject, &count);
     Ivar *ivars = class_copyIvarList(classObject, nil);
 
+    NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"];
     for (int i = 0; i < count; i ++) {
         // 取得成员名
-        if (nil == ivars[i]) {
-            break;
-        }
-        
-        NSString *memberName = [NSString stringWithUTF8String:ivar_getName(ivars[i])];
-        
-        const char *type = ivar_getTypeEncoding(ivars[i]);
-        NSString *dataType =  [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
-        
-        NSLog(@"Data %@ type: %@",memberName,dataType);
-        
-        YHDebugJSONModelDataType rtype = YHDebugJSONModelDataTypeObject;
-        if ([dataType hasPrefix:@"c"]) {
-            rtype = YHDebugJSONModelDataTypeBOOL;// BOOL
-        } else if ([dataType hasPrefix:@"i"]) {
-            rtype = YHDebugJSONModelDataTypeInteger;// int
-        } else if ([dataType hasPrefix:@"f"]) {
-            rtype = YHDebugJSONModelDataTypeFloat;// float
-        } else if ([dataType hasPrefix:@"d"]) {
-            rtype = YHDebugJSONModelDataTypeDouble; // double
-        } else if ([dataType hasPrefix:@"l"])  {
-            rtype = YHDebugJSONModelDataTypeLong;// long
-        }
-        
-        for (int j = 0; j < count; j++) {
-            objc_property_t property = properties[j];
-            NSString *propertyName = [[NSString alloc] initWithCString:property_getName(property)
-                                                              encoding:NSUTF8StringEncoding];
-            NSRange range = [memberName rangeOfString:propertyName];
+        if (nil != ivars[i] &&
+            ![filters containsObject:[[NSString alloc] initWithCString:property_getName(properties[i]) encoding:NSUTF8StringEncoding]]) {
+            NSString *memberName = [NSString stringWithUTF8String:ivar_getName(ivars[i])];
             
-            if (range.location == NSNotFound) {
-                continue;
-            } else {
-                id propertyValue = [dict objectForKey:propertyName];
+            const char *type = ivar_getTypeEncoding(ivars[i]);
+            NSString *dataType =  [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
+            
+            NSLog(@"Data %@ type: %@",memberName,dataType);
+            
+            YHDebugJSONDataType rtype = YHDebugJSONDataTypeObject;
+            if ([dataType hasPrefix:@"c"]) {
+                rtype = YHDebugJSONDataTypeBOOL;// BOOL
+            } else if ([dataType hasPrefix:@"i"]) {
+                rtype = YHDebugJSONDataTypeInteger;// int
+            } else if ([dataType hasPrefix:@"f"]) {
+                rtype = YHDebugJSONDataTypeFloat;// float
+            } else if ([dataType hasPrefix:@"d"]) {
+                rtype = YHDebugJSONDataTypeDouble; // double
+            } else if ([dataType hasPrefix:@"l"])  {
+                rtype = YHDebugJSONDataTypeLong;// long
+            }
+            
+            for (int j = 0; j < count; j++) {
+                objc_property_t property = properties[j];
+                NSString *propertyName = [[NSString alloc] initWithCString:property_getName(property)
+                                                                  encoding:NSUTF8StringEncoding];
+                NSRange range = [memberName rangeOfString:propertyName];
                 
-                switch (rtype) {
-                    case YHDebugJSONModelDataTypeBOOL: {
-                        BOOL temp = [[NSString stringWithFormat:@"%@", propertyValue] boolValue];
-                        propertyValue = [NSNumber numberWithBool:temp];
+                if (range.location == NSNotFound) {
+                    continue;
+                } else {
+                    id propertyValue = [dict objectForKey:propertyName];
+                    
+                    switch (rtype) {
+                        case YHDebugJSONDataTypeBOOL: {
+                            BOOL temp = [[NSString stringWithFormat:@"%@", propertyValue] boolValue];
+                            propertyValue = [NSNumber numberWithBool:temp];
+                        }
+                            break;
+                        case YHDebugJSONDataTypeInteger: {
+                            int temp = [[NSString stringWithFormat:@"%@", propertyValue] intValue];
+                            propertyValue = [NSNumber numberWithInt:temp];
+                        }
+                            break;
+                        case YHDebugJSONDataTypeFloat: {
+                            float temp = [[NSString stringWithFormat:@"%@", propertyValue] floatValue];
+                            propertyValue = [NSNumber numberWithFloat:temp];
+                        }
+                            break;
+                        case YHDebugJSONDataTypeDouble: {
+                            double temp = [[NSString stringWithFormat:@"%@", propertyValue] doubleValue];
+                            propertyValue = [NSNumber numberWithDouble:temp];
+                        }
+                            break;
+                        case YHDebugJSONDataTypeLong: {
+                            long long temp = [[NSString stringWithFormat:@"%@",propertyValue] longLongValue];
+                            propertyValue = [NSNumber numberWithLongLong:temp];
+                        }
+                            break;
+                            
+                        default:
+                            break;
                     }
-                        break;
-                    case YHDebugJSONModelDataTypeInteger: {
-                        int temp = [[NSString stringWithFormat:@"%@", propertyValue] intValue];
-                        propertyValue = [NSNumber numberWithInt:temp];
+                    
+                    if (memberName != nil) {
+                        [model setValue:propertyValue forKey:memberName];
                     }
-                        break;
-                    case YHDebugJSONModelDataTypeFloat: {
-                        float temp = [[NSString stringWithFormat:@"%@", propertyValue] floatValue];
-                        propertyValue = [NSNumber numberWithFloat:temp];
-                    }
-                        break;
-                    case YHDebugJSONModelDataTypeDouble: {
-                        double temp = [[NSString stringWithFormat:@"%@", propertyValue] doubleValue];
-                        propertyValue = [NSNumber numberWithDouble:temp];
-                    }
-                        break;
-                    case YHDebugJSONModelDataTypeLong: {
-                        long long temp = [[NSString stringWithFormat:@"%@",propertyValue] longLongValue];
-                        propertyValue = [NSNumber numberWithLongLong:temp];
-                    }
-                        break;
-                        
-                    default:
-                        break;
+                    
+                    break;
                 }
-                
-                if (memberName != nil) {
-                    [model setValue:propertyValue forKey:memberName];
-                }
-                
-                break;
             }
         }
+        
+        
     }
+    
+    free(ivars);
+    free(properties);
+    
     return model;
 }
+
 @end

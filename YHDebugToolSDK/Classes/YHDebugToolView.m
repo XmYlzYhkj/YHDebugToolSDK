@@ -58,19 +58,13 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-        
-        if (indexPath.row == 0) {
-            cell.textLabel.text = @"网络抓包工具";
-        }else{
-            cell.textLabel.text = @"切换开发环境";
-        }
-        
-        return cell;
-    }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    cell.textLabel.text = [self getCellText:indexPath];
+    
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"网络抓包工具";
+    }else{
+        cell.textLabel.text = @"切换开发环境";
+    }
     
     return cell;
 }
@@ -145,72 +139,6 @@
         _tableview = tableview;
     }
     return _tableview;
-}
-
-#pragma mark - business acton
-
--(NSString *)getCellText:(NSIndexPath *)indexPath{
-    NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
-    
-    NSString *moduleKey = array[indexPath.section - 1];
-    
-    YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
-    
-    NSString *envUrl = [self getEnvUrlByRow:indexPath.row withModel:model];
-    
-    NSString *check = model.currentEnvType == indexPath.row? @"✅":@"";
-    return [NSString stringWithFormat:@"%@%@:%@",
-            check,
-            [self getEnvNameByRow:indexPath.row],
-            envUrl];
-}
-
--(NSString *)getEnvNameByRow:(NSInteger)row{
-    switch (row) {
-        case 0:
-            return @"正式环境";
-            break;
-        case 1:
-            return @"开发环境";
-            break;
-        case 2:
-            return @"测试环境";
-        break;
-        case 3:
-            return @"预正式环境";
-        break;
-        default:
-            break;
-    }
-    return @"未知环境";
-}
-
--(NSString *)getEnvUrlByRow:(NSInteger)row withModel:(YHDebugToolEnvModel *)model{
-    switch (row) {
-        case 0:
-            return model.productUrl;
-            break;
-        case 1:
-            return model.devUrl;
-            break;
-        case 2:
-        return model.testUrl;
-            break;
-        case 3:
-            return model.preProductUrl;
-        break;
-        default:
-            break;
-    }
-    return @"地址为空";
-}
-
--(YHDebugToolEnvModel *)getEnvModelWithIndexPath:(NSIndexPath *)indexPath{
-    NSArray *array = [YHDebugToolManger shareInstance].envModelForModules.allKeys;
-    NSString *moduleKey = array[indexPath.section - 1];
-    YHDebugToolEnvModel *model = [YHDebugToolManger shareInstance].envModelForModules[moduleKey];
-    
-    return model;
 }
 
 #pragma mark - business action
