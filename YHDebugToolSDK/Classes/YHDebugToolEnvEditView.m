@@ -221,12 +221,11 @@
 
     self.currentEnvTextLabel.text = [NSString stringWithFormat:@"当前地址：%@",[self.editModel getEditEnvUrl]];
     
-    NSString *cacheInfo = @"app重启后将还原成以上地址";
+    NSString *cacheInfo = @"临时缓存,app重启后将还原";
     if (self.editModel.editEnvType == YHDebugToolEnvTypeLocalCache) {
-        cacheInfo = @"保存后该地址会被缓存到本地";
+        cacheInfo = @"永久缓存,app重启后继续保留";
     }
     self.currentNewEnvLabel.text = [NSString stringWithFormat:@"新地址：%@",cacheInfo];
-    
 }
 
 -(void)addInputAccessViewWithTextField:(UITextView *)textView

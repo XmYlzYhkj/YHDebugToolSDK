@@ -22,7 +22,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
 @property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *envModelForModules;
 
 /// 上次保存的旧数据，为了在每次重新打开app后，先读旧数据，再跟新环境对比，将每个模块旧的环境类型设置到新的数据上
-@property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *oldEnvModelForModules;
+//@property(nonatomic,strong)NSMutableDictionary<NSString *,YHDebugToolEnvModel *> *oldEnvModelForModules;
 
 @property(nonatomic,strong)NSLock *lock;
 
@@ -164,7 +164,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
         }
         
         [self.lock lock];
-        [YHDebugToolManger shareInstance].oldEnvModelForModules = dic;
+        [YHDebugToolManger shareInstance].envModelForModules = dic;
         [self.lock unlock];
         
     }else{
@@ -238,8 +238,8 @@ static NSInteger YHDebugToolView_Tag = 123321;
         nil == model) {
         return;
     }
-    
-    if ([YHDebugToolManger shareInstance].oldEnvModelForModules.allKeys.count == 0) {
+    //先读取本地缓存
+    if ([YHDebugToolManger shareInstance].envModelForModules.allKeys.count == 0) {
         [[YHDebugToolManger shareInstance] readEnvData];
     }
     
@@ -248,7 +248,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
     //start edit by zxl
     //app重新打开后，每次进入，先读取旧数据的当前环境，将旧环境设置到新的model里，这样每次都可以读取到旧的数据
     
-    YHDebugToolEnvModel *oldModel = [YHDebugToolManger shareInstance].oldEnvModelForModules[model.moduleId];
+    YHDebugToolEnvModel *oldModel = [YHDebugToolManger shareInstance].envModelForModules[model.moduleId];
     
     if (oldModel != nil) {
         model.currentEnvType = oldModel.currentEnvType;

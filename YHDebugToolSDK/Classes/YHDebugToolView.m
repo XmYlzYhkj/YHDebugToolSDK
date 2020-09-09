@@ -90,7 +90,7 @@
     UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"UITableViewHeaderFooterView"];
     
     if (section == 0) {
-        headerView.textLabel.text = @"菜单列表";
+        headerView.textLabel.text = @"调试功能列表";
     }
     return headerView;
 }
@@ -120,11 +120,11 @@
     if (!_closeBtn) {
         _closeBtn = [[UIButton alloc] init];
         [_closeBtn setTitle:@"❌关闭调试界面❌" forState:UIControlStateNormal];
-        [_closeBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_closeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [_closeBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-        _closeBtn.layer.borderColor = [UIColor redColor].CGColor;
+        _closeBtn.layer.borderColor = [UIColor blackColor].CGColor;
         _closeBtn.layer.borderWidth = 1;
-        
+        [_closeBtn setBackgroundColor:[UIColor whiteColor]];
     }
     return _closeBtn;
 }
