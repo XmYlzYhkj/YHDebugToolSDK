@@ -81,7 +81,9 @@ static NSInteger YHDebugToolView_Tag = 123321;
 }
 
 +(void)showNetDebugView{
+#if DEBUG
     [[FLEXManager sharedManager] showExplorer];
+#endif    
 }
 
 #pragma mark - lazy loading

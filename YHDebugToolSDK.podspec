@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
- This sdk can switch develop environment and detect network.
+  This sdk can switch develop environment and detect network.
+  1、The feature of Switch environment has 5 kinds of environments and can define your own url.
+  2、The feature of detectting network can catch up detail net information when send a request.
                        DESC
 
   s.homepage         = 'https://github.com/XmYlzYhkj/YHDebugToolSDK.git'
