@@ -32,8 +32,6 @@
 
 -(void)initData{
     self.backgroundColor = [UIColor whiteColor];
-    
-    [[YHDebugToolManger shareInstance] readEnvData];
 }
 
 -(void)createView{
@@ -82,6 +80,7 @@
     }else{
         YHDebugToolEnvListView *listView = [[YHDebugToolEnvListView alloc] initWithFrame:self.bounds];
         [self addSubview:listView];
+        [YHDebugToolManger showFeedbackLight];
     }
 }
 
@@ -120,11 +119,9 @@
     if (!_closeBtn) {
         _closeBtn = [[UIButton alloc] init];
         [_closeBtn setTitle:@"❌关闭调试界面❌" forState:UIControlStateNormal];
-        [_closeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [_closeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_closeBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-        _closeBtn.layer.borderColor = [UIColor blackColor].CGColor;
-        _closeBtn.layer.borderWidth = 1;
-        [_closeBtn setBackgroundColor:[UIColor whiteColor]];
+        [_closeBtn setBackgroundColor:[UIColor brownColor]];
     }
     return _closeBtn;
 }
@@ -145,6 +142,7 @@
 
 -(void)closeView{
     [self removeFromSuperview];
+    [YHDebugToolManger showFeedbackLight];
 }
 
 @end

@@ -18,11 +18,12 @@
     self = [super init];
     
     if (self) {
+        self.moduleName = @"模块未命名";
         self.devUrl = @"";
         self.testUrl = @"";
         self.productUrl = @"";
-        self.preProductUrl = @"左滑可进入编辑";
-        self.localCacheUrl = @"此环境类型app重启后只读取本地缓存";
+        self.preProductUrl = @"左滑->菜单";
+        self.localCacheUrl = @"本地缓存";
     }
     return self;
 }

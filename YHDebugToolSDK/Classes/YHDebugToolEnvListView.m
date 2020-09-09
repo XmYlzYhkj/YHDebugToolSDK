@@ -59,7 +59,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     cell.textLabel.text = [self getCellText:indexPath];
-    
+    cell.textLabel.numberOfLines = 0;
     return cell;
 }
 
@@ -85,7 +85,13 @@
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[YHDebugToolManger shareInstance] saveEnvData];
+        
     });
+    
+    NSString *message = [NSString stringWithFormat:@"已成功切换到：%@\n%@",[model getCurrentEnvName],[model getCurrentEnvUrl]];
+    [YHDebugToolManger showTipAlertWithTitle:model.moduleName withMessage:message];
+    
+    [YHDebugToolManger showFeedbackLight];
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -96,7 +102,7 @@
     
     YHDebugToolEnvModel *model = [YHDebugToolManger getModuleEnvModelWithId:array[section]];
     
-    headerView.textLabel.text = [NSString stringWithFormat:@"模块：%@",model.moduleName];
+    headerView.textLabel.text = [NSString stringWithFormat:@"模块：%@_%@",model.moduleName,model.moduleId];
     return headerView;
 }
 
@@ -121,6 +127,24 @@
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //编辑
+    UITableViewRowAction *copyRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"复制" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+        YHDebugToolEnvModel *model = [self getEnvModelWithIndexPath:indexPath];
+        model.currentEnvType = indexPath.row;
+        
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        
+        if ([model getCurrentEnvUrl] != nil) {
+            pasteboard.string = [model getCurrentEnvUrl];
+            
+            [YHDebugToolManger showTipAlertWithTitle:[NSString stringWithFormat:@"%@_复制成功",model.moduleName] withMessage:pasteboard.string];
+        }
+        [YHDebugToolManger showFeedbackLight];
+        NSLog(@"点击了复制");
+    }];
+    copyRowAction.backgroundColor = [UIColor systemPinkColor];
+    
+    //编辑
     UITableViewRowAction *editRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         
         YHDebugToolEnvModel *model = [self getEnvModelWithIndexPath:indexPath];
@@ -134,12 +158,13 @@
         
         [self addSubview:editView];
         
+        [YHDebugToolManger showFeedbackLight];
         NSLog(@"点击了编辑");
     }];
     
     editRowAction.backgroundColor = [UIColor purpleColor];
     
-    return @[editRowAction];
+    return @[editRowAction,copyRowAction];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -152,10 +177,9 @@
     if (!_closeBtn) {
         _closeBtn = [[UIButton alloc] init];
         [_closeBtn setTitle:@"⬅️返回主页⬅️" forState:UIControlStateNormal];
-        [_closeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [_closeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_closeBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-        _closeBtn.layer.borderColor = [UIColor redColor].CGColor;
-        _closeBtn.layer.borderWidth = 1;
+        [_closeBtn setBackgroundColor:[UIColor brownColor]];
         
     }
     return _closeBtn;
@@ -223,6 +247,7 @@
 
 -(void)closeView{
     [self removeFromSuperview];
+    [YHDebugToolManger showFeedbackLight];
 }
 
 @end

@@ -1,13 +1,14 @@
 PODS:
-  - FLEX (2.4.0)
+  - FLEX (3.0.0)
   - YHDebugToolSDK (1.0.0):
     - FLEX
 
 DEPENDENCIES:
+  - FLEX
   - YHDebugToolSDK (from `../`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - FLEX
 
 EXTERNAL SOURCES:
@@ -15,9 +16,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
-  YHDebugToolSDK: 5f2cab0114a26c5260e81f9c4a443c7d24592ddb
+  FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
+  YHDebugToolSDK: a645b1a62188a37e329665ea63824cc7a78f545f
 
-PODFILE CHECKSUM: f5a00c542a0c4a035d3b73ac2c6295c3cd8cf4b5
+PODFILE CHECKSUM: fc482e099775d19f40a10084b5ebe77754175653
 
 COCOAPODS: 1.9.0

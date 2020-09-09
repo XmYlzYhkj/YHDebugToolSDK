@@ -7,7 +7,7 @@
 
 #import "YHDebugToolEnvEditView.h"
 
-#import "YHDebugToolEnvModel.h"
+#import "YHDebugToolSDK.h"
 
 
 @interface YHDebugToolEnvEditView()<UITextViewDelegate>
@@ -112,7 +112,8 @@
 -(UILabel *)currentNewEnvLabel{
     if (!_currentNewEnvLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.textColor = [UIColor greenColor];
+        label.textColor = [UIColor brownColor];
+        label.numberOfLines = 0;
         _currentNewEnvLabel = label;
     }
     return _currentNewEnvLabel;
@@ -121,9 +122,9 @@
 -(UITextView *)textView{
     if (!_textView) {
         _textView = [[UITextView alloc] init];
-        _textView.textColor = [UIColor greenColor];
+        _textView.textColor = [UIColor brownColor];
         _textView.delegate = self;
-        _textView.layer.borderColor = [UIColor greenColor].CGColor;
+        _textView.layer.borderColor = [UIColor brownColor].CGColor;
         _textView.layer.borderWidth = 1;
         _textView.layer.cornerRadius = 10;
         _textView.font = [UIFont boldSystemFontOfSize:15];
@@ -136,7 +137,7 @@
         UILabel *label = [[UILabel alloc] init];
         label.font = [UIFont boldSystemFontOfSize:15];
         label.textColor = [UIColor redColor];
-        
+        label.numberOfLines = 0;
         _currentEnvTextLabel = label;
     }
     return _currentEnvTextLabel;
@@ -147,6 +148,7 @@
         UILabel *label = [[UILabel alloc] init];
         label.font = [UIFont boldSystemFontOfSize:15];
         label.textColor = [UIColor redColor];
+        label.numberOfLines = 0;
         _currentEnvNameLabel = label;
     }
     return _currentEnvNameLabel;
@@ -157,6 +159,7 @@
         UILabel *label = [[UILabel alloc] init];
         label.font = [UIFont boldSystemFontOfSize:15];
         label.textColor = [UIColor redColor];
+        label.numberOfLines = 0;
         _currentModuleLabel = label;
     }
     return _currentModuleLabel;
@@ -195,18 +198,25 @@
 #pragma mark - business action
 
 -(void)clickBtn:(UIButton *)btn{
+    
+    [YHDebugToolManger showFeedbackLight];
+    
     if (btn.tag == 0) {
         NSLog(@"cancel");
         [self removeFromSuperview];
     }else{
         NSLog(@"保存");
         
-        if (self.textView.text.length > 0) {
-            [self.editModel resetWithNewUrl:self.textView.text toEnv:self.editModel.editEnvType];
-            
-            if (self.editBlock) {
-                self.editBlock();
-            }
+        if (self.textView.text.length == 0) {
+            [YHDebugToolManger showTipAlertWithTitle:@"温馨提示" withMessage:@"请输入新地址"];
+            return;
+        }
+        
+        [self.editModel resetWithNewUrl:self.textView.text toEnv:self.editModel.editEnvType];
+        [YHDebugToolManger showTipAlertWithTitle:@"保存成功" withMessage:[NSString stringWithFormat:@"模块：%@\n环境：%@\n新地址：%@",self.editModel.moduleName,[self.editModel getEditEnvName],self.textView.text]];
+        
+        if (self.editBlock) {
+            self.editBlock();
         }
         [self removeFromSuperview];
     }

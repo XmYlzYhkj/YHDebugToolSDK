@@ -56,6 +56,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
     UIView *superView = app.delegate.window.rootViewController.view;
     
     if ([superView viewWithTag:tag] == nil) {
+        [YHDebugToolManger showFeedbackLight];
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请确认是否进入debug主页" preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -85,6 +86,7 @@ static NSInteger YHDebugToolView_Tag = 123321;
 #if __has_include(<FLEX/FLEX.h>)
     #if DEBUG
     [[FLEXManager sharedManager] showExplorer];
+    [YHDebugToolManger showFeedbackLight];
     #endif
 #endif
 
@@ -221,6 +223,10 @@ static NSInteger YHDebugToolView_Tag = 123321;
     }
 }
 
++(NSString *)getCurrentUrlWithModuleId:(NSString *)moduleId{
+    return [[YHDebugToolManger getModuleEnvModelWithId:moduleId] getCurrentEnvUrl];
+}
+
 +(void)resetEnv{
     NSArray *array = [[YHDebugToolManger shareInstance].envModelForModules allValues];
     
@@ -242,6 +248,14 @@ static NSInteger YHDebugToolView_Tag = 123321;
     if (model.moduleId == nil ||
         [@"" isEqualToString:model.moduleId] ||
         nil == model) {
+        
+#if DEBUG
+        dispatch_barrier_async(dispatch_get_main_queue(), ^{
+            
+            [YHDebugToolManger showTipAlertWithTitle:@"温馨提示" withMessage:@"请检查代码：模块id【moduleId】不能为空"];
+        });
+#endif
+        
         return;
     }
     //先读取本地缓存
@@ -271,5 +285,26 @@ static NSInteger YHDebugToolView_Tag = 123321;
     [[YHDebugToolManger shareInstance].lock lock];
     [[YHDebugToolManger shareInstance].envModelForModules removeObjectForKey:moduleId];
     [[YHDebugToolManger shareInstance].lock unlock];
+}
+
++(void)showFeedbackLight
+{
+    if (@available(iOS 10.0, *)) {
+        UIImpactFeedbackGenerator *impact =[[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleMedium];
+        [impact impactOccurred];
+        impact = nil;
+    }
+}
+
++(void)showTipAlertWithTitle:(NSString *)title withMessage:(NSString *)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *debugAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:debugAction];
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    [app.delegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 @end

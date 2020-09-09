@@ -39,6 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param envType 地址类型
 + (NSString *)getUrlWithModuleId:(NSString *)moduleId withType:(YHDebugToolEnvType)envType;
 
+/// 获取根据模块id获取模块中的当前地址
+/// @param moduleId 模块ID
++ (NSString *)getCurrentUrlWithModuleId:(NSString *)moduleId;
+
 /// 根据模块ID获取数据
 /// @param moduleId 模块ID
 +(YHDebugToolEnvModel *)getModuleEnvModelWithId:(NSString *)moduleId;
@@ -54,6 +58,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param moduleId 模块id
 +(void)removeModuleModelById:(NSString *)moduleId;
 
+/// 点击震动效果
++(void)showFeedbackLight;
+
+
+/// 显示弹窗
+/// @param title 标题
+/// @param message 消息
++(void)showTipAlertWithTitle:(NSString *)title withMessage:(NSString *)message;
 @end
 
 NS_ASSUME_NONNULL_END

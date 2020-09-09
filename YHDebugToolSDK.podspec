@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHDebugToolSDK'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'This sdk can switch develop environment and detect network.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'FLEX' #, :configurations => ['Debug']
+   s.dependency "FLEX" #,"4.1.1" #, :configurations => ['Debug']
 end

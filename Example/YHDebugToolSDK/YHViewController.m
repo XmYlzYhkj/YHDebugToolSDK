@@ -25,11 +25,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-//    YHDebugToolView *toolView = [[YHDebugToolView alloc] initWithFrame:CGRectMake(0, 0, VERTICAL_SCREEN_WIDTH, VERTICAL_SCREEN_HEIGHT)];
+    [self initData];
     
-//    [self.view addSubview:toolView];
+    NSArray *btnTitle = @[@"打开调试主页",@"请求网址查看日志",@"显示模块YH_modelA地址"];
+    for (NSInteger i = 0; i < btnTitle.count; i++) {
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 150 + 80 * i, [UIScreen mainScreen].bounds.size.width - 40, 50)];
+        
+        NSString *title = btnTitle[i];
+        btn.tag = i;
+        [btn setTitle:title forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor brownColor]];
+        [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn];
+    }
     
-    [self testData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,19 +48,20 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)testData{
+/// 初始化模块
+-(void)initData{
     YHDebugToolEnvModel *modelA = [YHDebugToolEnvModel new];
     modelA.productUrl = @"http:product_modelA";
-    modelA.testUrl = @"http:test_modelA";
-    modelA.devUrl = @"http:dev_modelA";
+    modelA.testUrl = @"https://yyzs.ylzpay.com:1400";
+    modelA.devUrl = @"http://alilive.ylzpay.cn/OperAssist-web";
     modelA.moduleName = @"在线问诊A";
     modelA.moduleId = @"YH_modelA";
     
     YHDebugToolEnvModel *modelB = [YHDebugToolEnvModel new];
     modelB.productUrl = @"http:product_modelB";
-    modelB.testUrl = @"http:test_modelB";
-    modelB.devUrl = @"http:dev_modelB";
-    modelB.moduleName = @"社保查询";
+    modelB.testUrl = @"https://yyzs.ylzpay.com:1400";
+    modelB.devUrl = @"http://alilive.ylzpay.cn/OperAssist-web";
+//    modelB.moduleName = @"社保查询";
     modelB.moduleId = @"YH_modelB";
     
     YHDebugToolEnvModel *modelC = [YHDebugToolEnvModel new];
@@ -63,5 +74,47 @@
     [YHDebugToolManger addModuleModel:modelA];
     [YHDebugToolManger addModuleModel:modelB];
     [YHDebugToolManger addModuleModel:modelC];
+}
+
+-(void)clickBtn:(UIButton *)btn{
+    if (btn.tag == 0) {
+        [self showHomePage];
+    }else if(btn.tag == 1){
+        [self sendRequest];
+    }else{
+        [self getCurrentModuleUrl];
+    }
+}
+/// 打开调试主页
+-(void)showHomePage{
+    [YHDebugToolManger showHomePage];
+}
+
+/// 根据模块名称获取当前地址
+-(NSString *)getCurrentModuleUrl{
+    
+    NSString *moduleId = @"YH_modelA";
+    
+    NSString *url = [YHDebugToolManger getCurrentUrlWithModuleId:moduleId];
+    
+    //debug时候，弹窗提示
+    [YHDebugToolManger showTipAlertWithTitle:[YHDebugToolManger getModuleEnvModelWithId:moduleId].moduleName withMessage:url];
+    
+    return url;
+}
+
+-(void)sendRequest{
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
+    
+    NSURLSessionTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [YHDebugToolManger showTipAlertWithTitle:@"请求结束" withMessage:@"点击--》网络抓包--》menu--》Network History 即可查看网络记录"];
+        });
+    }];
+    // 启动任务
+    [task resume];
+    
 }
 @end

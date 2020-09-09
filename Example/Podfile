@@ -5,8 +5,9 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'YHDebugToolSDK_Example' do
-  pod 'YHDebugToolSDK', :path => '../'
-
+  pod 'YHDebugToolSDK' , :path => '../'
+  pod 'FLEX' , :configurations => ['Debug']
+  
   target 'YHDebugToolSDK_Tests' do
     inherit! :search_paths
 
