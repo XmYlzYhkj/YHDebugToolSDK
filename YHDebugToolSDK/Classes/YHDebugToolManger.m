@@ -10,10 +10,11 @@
 #import "YHDebugToolDicToModel.h"
 #import "YHDebugToolView.h"
 
-#if DEBUG
-#import <FLEX/FLEX.h>
+#if __has_include(<FLEX/FLEX.h>)
+    #if DEBUG
+    #import <FLEX/FLEX.h>
+    #endif
 #endif
-
 static NSInteger YHDebugToolView_Tag = 123321;
 
 @interface YHDebugToolManger()
@@ -81,9 +82,12 @@ static NSInteger YHDebugToolView_Tag = 123321;
 }
 
 +(void)showNetDebugView{
-#if DEBUG
+#if __has_include(<FLEX/FLEX.h>)
+    #if DEBUG
     [[FLEXManager sharedManager] showExplorer];
-#endif    
+    #endif
+#endif
+
 }
 
 #pragma mark - lazy loading
